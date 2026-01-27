@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ioannis Alexopoulos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FFFCF9;
+            --bg-alt: #FBF8F4;
+            --text: #2D2A26;
+            --text-soft: #5C5650;
+            --text-muted: #9A9490;
+            --accent: #C45D3A;
+            --accent-soft: #E8D5CE;
+            --border: #EBE6E0;
+            --card: #FFFFFF;
+        }
+
+        [data-theme="dark"] {
+            --bg: #1A1918;
+            --bg-alt: #232220;
+            --text: #F5F2EF;
+            --text-soft: #B8B3AD;
+            --text-muted: #7A756F;
+            --accent: #E07A56;
+            --accent-soft: #3D3330;
+            --border: #333130;
+            --card: #252322;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 15px;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            transition: background 0.4s, border-color 0.4s;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        nav a {
+            padding: 0.5rem 0.875rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-soft);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .theme-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--accent);
+        }
+
+        #langBtn {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Intro */
+        .intro {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .intro-text h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .intro-text .role {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .intro-text p {
+            color: var(--text-soft);
+            max-width: 500px;
+        }
+
+        .intro-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .intro-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .intro-links a:hover {
+            color: var(--accent);
+        }
+
+        .intro-links svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Experience */
+        .experience-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1.5rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .experience-item:first-child {
+            padding-top: 0;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            padding-top: 0.2rem;
+        }
+
+        .exp-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+
+        .exp-company {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-content p {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        .exp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+
+        .exp-tag {
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 0.25rem 0.6rem;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-muted);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-group h3 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .skill-list span {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-card {
+            padding: 1.25rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: all 0.25s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+
+        [data-theme="dark"] .project-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .project-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .project-card p {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            line-height: 1.5;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s;
+            min-width: 0;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .contact-item span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 8px;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            width: 16px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 1px;
+            transition: all 0.2s;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .header-inner {
+                height: 56px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 0.75rem;
+                gap: 0;
+                display: none;
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                padding: 0.75rem 1rem;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .avatar {
+                margin: 0 auto;
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+
+            .intro-text p {
+                max-width: none;
+            }
+
+            .intro-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+
+            .exp-date {
+                padding-top: 0;
+                margin-bottom: 0.25rem;
+            }
+
+            section {
+                padding: 2.5rem 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">I<span>.</span>A</a>
+            
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav">
+                <a href="#about" class="active">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme" id="themeBtn">☀️</button>
+            <button class="theme-btn" onclick="toggleLanguage()" aria-label="Toggle language" id="langBtn">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- About -->
+        <section id="about">
+            <div class="intro animate">
+                <div class="avatar">IA</div>
+                <div class="intro-text">
+                    <h1>Ioannis Alexopoulos</h1>
+                    <p class="role">Regional & Business Development Manager</p>
+                    <p>Results-driven manager with 15+ years of experience leading teams, optimizing operations, and driving sustained growth. Combining a technical background in Computer Engineering with proven leadership in business development.</p>
+                    <div class="intro-links">
+                        <a href="mailto:i.alexopoulos@protonmail.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ialexop" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/johnnypatras" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="tel:+306978036458">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span>Phone</span>
+                        </a>
+                        <a href="#" onclick="downloadCV(); return false;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2 class="section-title animate">Experience</h2>
+            
+            <div class="experience-item animate animate-delay-1">
+                <div class="exp-date">2019 — Now</div>
+                <div class="exp-content">
+                    <h3>Regional & Business Development Manager</h3>
+                    <p class="exp-company">NOBACCO, Greece</p>
+                    <p>Directing regional operations, ensuring compliance with corporate policies and optimizing ROI. Supervising and developing a team of 30 employees. Building B2B partnerships and monitoring competitor activity.</p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Leadership</span>
+                        <span class="exp-tag">B2B</span>
+                        <span class="exp-tag">Operations</span>
+                        <span class="exp-tag">Team Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item animate animate-delay-2">
+                <div class="exp-date">2015 — 2019</div>
+                <div class="exp-content">
+                    <h3>Store Manager</h3>
+                    <p class="exp-company">NOBACCO, Greece</p>
+                    <p>Achieved consistent sales targets and ensured customer satisfaction. Oversaw staff scheduling and performance management.</p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Sales</span>
+                        <span class="exp-tag">Customer Service</span>
+                        <span class="exp-tag">Staff Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item animate animate-delay-3">
+                <div class="exp-date">2010 — 2012</div>
+                <div class="exp-content">
+                    <h3>IT Administrator</h3>
+                    <p class="exp-company">Internet Cafe K. Achaia, Greece</p>
+                    <p>Maintained and upgraded hardware/software systems. Implemented data security protocols.</p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">IT Support</span>
+                        <span class="exp-tag">Hardware</span>
+                        <span class="exp-tag">Security</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item animate animate-delay-4">
+                <div class="exp-date">2004 — 2007</div>
+                <div class="exp-content">
+                    <h3>Customer Service Representative</h3>
+                    <p class="exp-company">OTE S.A., Greece</p>
+                    <p>Delivered frontline customer support and promoted services.</p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Customer Support</span>
+                        <span class="exp-tag">Telecommunications</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-title animate">Skills</h2>
+            
+            <div class="skills-grid animate animate-delay-1">
+                <div class="skill-group">
+                    <h3>Core Competencies</h3>
+                    <div class="skill-list">
+                        <span>Strategic Leadership</span>
+                        <span>Team Development</span>
+                        <span>Business Planning</span>
+                        <span>Partnership Management</span>
+                        <span>Process Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Technical</h3>
+                    <div class="skill-list">
+                        <span>Python</span>
+                        <span>Java / JavaScript</span>
+                        <span>SQL</span>
+                        <span>HTML5 / CSS</span>
+                        <span>LaTeX</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>In Progress</h3>
+                    <div class="skill-list">
+                        <span>Professional Scrum Master</span>
+                        <span>CS50P (Harvard)</span>
+                        <span>CS50AI (Harvard)</span>
+                        <span>Oracle Java Foundations</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span>Greek (Native)</span>
+                        <span>English (Proficiency)</span>
+                        <span>German (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2 class="section-title animate">Education</h2>
+            
+            <div class="experience-item animate animate-delay-1">
+                <div class="exp-date">2019</div>
+                <div class="exp-content">
+                    <h3>Diploma in Computer Engineering and Informatics</h3>
+                    <p class="exp-company">University of Patras, School of Engineering</p>
+                    <p>Thesis: "Low Code Development Platforms"</p>
+                </div>
+            </div>
+
+            <div class="experience-item animate animate-delay-2">
+                <div class="exp-date">2017 — 2024</div>
+                <div class="exp-content">
+                    <h3>Professional Seminars</h3>
+                    <p class="exp-company">Various Institutions</p>
+                    <p>Customer Service (Hellenic Customer Service Institute), Sales Strategy and Specialized Techniques (NOBACCO/BAT Hellas), Best Practices in Customer Service (NOBACCO)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="section-title animate">Get in Touch</h2>
+            
+            <div class="contact-grid animate animate-delay-1">
+                <a href="mailto:i.alexopoulos@protonmail.com" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>i.alexopoulos@protonmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/ialexop" target="_blank" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/johnnypatras" target="_blank" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="tel:+306978036458" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>+30 697 803 6458</span>
+                </a>
+                <div class="contact-item" style="cursor: default;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Patras, Greece</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Ioannis Alexopoulos</p>
+    </footer>
+
+    <script>
+        // Theme
+        function getSystemTheme() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function updateThemeButton(theme) {
+            document.getElementById('themeBtn').textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeButton(theme);
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || getSystemTheme();
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            setTheme(next);
+        }
+
+        // Initialize theme
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const theme = saved || getSystemTheme();
+            setTheme(theme);
+
+            // Listen for system changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('open');
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('open');
+            });
+        });
+
+        // Active nav state
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                if (scrollY >= top) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const animateElements = document.querySelectorAll('.animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // CV Download
+        function downloadCV() {
+            const isGreek = document.documentElement.getAttribute('data-lang') === 'el';
+            const cv = isGreek ? `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ιωάννης Αλεξόπουλος - Βιογραφικό</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #333; }
+        h1 { margin-bottom: 4px; }
+        .subtitle { color: #c45d3a; margin-bottom: 8px; }
+        .contact { color: #666; font-size: 0.9em; margin-bottom: 24px; }
+        h2 { color: #c45d3a; border-bottom: 1px solid #eee; padding-bottom: 4px; margin-top: 24px; font-size: 1.1em; }
+        .job { margin-bottom: 16px; }
+        .job-title { font-weight: bold; }
+        .job-meta { color: #666; font-size: 0.9em; margin-bottom: 4px; }
+        ul { padding-left: 20px; margin: 8px 0; }
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill { background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <h1>Ιωάννης Αλεξόπουλος</h1>
+    <p class="subtitle">Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης</p>
+    <p class="contact">i.alexopoulos@protonmail.com · +30 697 803 6458 · linkedin.com/in/ialexop · github.com/johnnypatras · Πάτρα, Ελλάδα</p>
+    
+    <h2>Επαγγελματικό Προφίλ</h2>
+    <p>Αποτελεσματικός Περιφερειακός Διευθυντής με περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, βελτιστοποίηση λειτουργιών και επίτευξη βιώσιμης ανάπτυξης. Κάτοχος διπλώματος Μηχανικού Η/Υ και Πληροφορικής, συνδυάζοντας τεχνική εξειδίκευση με αποδεδειγμένη ηγεσία στην επιχειρηματική ανάπτυξη.</p>
+    
+    <h2>Επαγγελματική Εμπειρία</h2>
+    <div class="job">
+        <div class="job-title">Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης</div>
+        <div class="job-meta">NOBACCO, Ελλάδα · 2019 — Σήμερα</div>
+        <ul>
+            <li>Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI</li>
+            <li>Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων</li>
+            <li>Δημιουργία B2B συνεργασιών και παρακολούθηση ανταγωνισμού</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">Διευθυντής Καταστήματος</div>
+        <div class="job-meta">NOBACCO, Ελλάδα · 2015 — 2019</div>
+        <ul>
+            <li>Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών</li>
+            <li>Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">Διαχειριστής IT</div>
+        <div class="job-meta">Internet Cafe Κ. Αχαΐα, Ελλάδα · 2010 — 2012</div>
+        <ul>
+            <li>Συντήρηση και αναβάθμιση συστημάτων hardware/software</li>
+            <li>Εφαρμογή πρωτοκόλλων ασφάλειας δεδομένων</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">Εκπρόσωπος Εξυπηρέτησης Πελατών</div>
+        <div class="job-meta">ΟΤΕ Α.Ε., Ελλάδα · 2004 — 2007</div>
+        <ul>
+            <li>Παροχή υποστήριξης πελατών και προώθηση υπηρεσιών</li>
+        </ul>
+    </div>
+    
+    <h2>Εκπαίδευση</h2>
+    <div class="job">
+        <div class="job-title">Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής</div>
+        <div class="job-meta">Πανεπιστήμιο Πατρών, Πολυτεχνική Σχολή · 2019</div>
+        <p>Διπλωματική: "Low Code Development Platforms"</p>
+    </div>
+    
+    <h2>Δεξιότητες</h2>
+    <div class="skills">
+        <span class="skill">Στρατηγική Ηγεσία</span>
+        <span class="skill">Ανάπτυξη Ομάδων</span>
+        <span class="skill">Επιχειρηματικός Σχεδιασμός</span>
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">SQL</span>
+        <span class="skill">JavaScript</span>
+    </div>
+    
+    <h2>Γλώσσες</h2>
+    <p>Ελληνικά (Μητρική) · Αγγλικά (Proficiency - Michigan) · Γερμανικά (Mittelstufe - Goethe Institut)</p>
+</body>
+</html>` : `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ioannis Alexopoulos - CV</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #333; }
+        h1 { margin-bottom: 4px; }
+        .subtitle { color: #c45d3a; margin-bottom: 8px; }
+        .contact { color: #666; font-size: 0.9em; margin-bottom: 24px; }
+        h2 { color: #c45d3a; border-bottom: 1px solid #eee; padding-bottom: 4px; margin-top: 24px; font-size: 1.1em; }
+        .job { margin-bottom: 16px; }
+        .job-title { font-weight: bold; }
+        .job-meta { color: #666; font-size: 0.9em; margin-bottom: 4px; }
+        ul { padding-left: 20px; margin: 8px 0; }
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill { background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <h1>Ioannis Alexopoulos</h1>
+    <p class="subtitle">Regional & Business Development Manager</p>
+    <p class="contact">i.alexopoulos@protonmail.com · +30 697 803 6458 · linkedin.com/in/ialexop · github.com/johnnypatras · Patras, Greece</p>
+    
+    <h2>Professional Summary</h2>
+    <p>Results-driven Regional & Business Development Manager with more than 15 years of experience leading teams, optimizing operations, and driving sustained growth. Holds a Diploma in Computer Engineering and Informatics, combining technical expertise with proven leadership in business development.</p>
+    
+    <h2>Experience</h2>
+    <div class="job">
+        <div class="job-title">Regional & Business Development Manager</div>
+        <div class="job-meta">NOBACCO, Greece · 2019 — Present</div>
+        <ul>
+            <li>Directed regional operations, ensuring compliance with corporate policies and optimizing ROI</li>
+            <li>Supervised and developed a team of 30 employees</li>
+            <li>Built B2B partnerships and monitored competitor activity</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">Store Manager</div>
+        <div class="job-meta">NOBACCO, Greece · 2015 — 2019</div>
+        <ul>
+            <li>Achieved consistent sales targets and ensured customer satisfaction</li>
+            <li>Oversaw staff scheduling and performance management</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">IT Administrator</div>
+        <div class="job-meta">Internet Cafe K. Achaia, Greece · 2010 — 2012</div>
+        <ul>
+            <li>Maintained and upgraded hardware/software systems</li>
+            <li>Implemented data security protocols</li>
+        </ul>
+    </div>
+    <div class="job">
+        <div class="job-title">Customer Service Representative</div>
+        <div class="job-meta">OTE S.A., Greece · 2004 — 2007</div>
+        <ul>
+            <li>Delivered frontline customer support and promoted services</li>
+        </ul>
+    </div>
+    
+    <h2>Education</h2>
+    <div class="job">
+        <div class="job-title">Diploma in Computer Engineering and Informatics</div>
+        <div class="job-meta">University of Patras, School of Engineering · 2019</div>
+        <p>Thesis: "Low Code Development Platforms"</p>
+    </div>
+    
+    <h2>Skills</h2>
+    <div class="skills">
+        <span class="skill">Strategic Leadership</span>
+        <span class="skill">Team Development</span>
+        <span class="skill">Business Planning</span>
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">SQL</span>
+        <span class="skill">JavaScript</span>
+    </div>
+    
+    <h2>Languages</h2>
+    <p>Greek (Native) · English (Proficiency - Michigan) · German (Intermediate - Goethe Institut)</p>
+</body>
+</html>`;
+            const win = window.open('', '_blank');
+            win.document.write(cv);
+            win.document.close();
+            setTimeout(() => win.print(), 200);
+        }
+
+        // Language Toggle
+        const translations = {
+            en: {
+                about: 'About',
+                experience: 'Experience',
+                skills: 'Skills',
+                education: 'Education',
+                contact: 'Contact',
+                role: 'Regional & Business Development Manager',
+                summary: 'Results-driven manager with 15+ years of experience leading teams, optimizing operations, and driving sustained growth. Combining a technical background in Computer Engineering with proven leadership in business development.',
+                email: 'Email',
+                phone: 'Phone',
+                downloadCV: 'Download CV',
+                experienceTitle: 'Experience',
+                skillsTitle: 'Skills',
+                educationTitle: 'Education',
+                contactTitle: 'Get in Touch',
+                // Experience
+                exp1Title: 'Regional & Business Development Manager',
+                exp1Company: 'NOBACCO, Greece',
+                exp1Desc: 'Directing regional operations, ensuring compliance with corporate policies and optimizing ROI. Supervising and developing a team of 30 employees. Building B2B partnerships and monitoring competitor activity.',
+                exp1Date: '2019 — Now',
+                exp2Title: 'Store Manager',
+                exp2Company: 'NOBACCO, Greece',
+                exp2Desc: 'Achieved consistent sales targets and ensured customer satisfaction. Oversaw staff scheduling and performance management.',
+                exp2Date: '2015 — 2019',
+                exp3Title: 'IT Administrator',
+                exp3Company: 'Internet Cafe K. Achaia, Greece',
+                exp3Desc: 'Maintained and upgraded hardware/software systems. Implemented data security protocols.',
+                exp3Date: '2010 — 2012',
+                exp4Title: 'Customer Service Representative',
+                exp4Company: 'OTE S.A., Greece',
+                exp4Desc: 'Delivered frontline customer support and promoted services.',
+                exp4Date: '2004 — 2007',
+                // Skills
+                coreCompetencies: 'Core Competencies',
+                technical: 'Technical',
+                inProgress: 'In Progress',
+                languages: 'Languages',
+                skill1: 'Strategic Leadership',
+                skill2: 'Team Development',
+                skill3: 'Business Planning',
+                skill4: 'Partnership Management',
+                skill5: 'Process Optimization',
+                lang1: 'Greek (Native)',
+                lang2: 'English (Proficiency)',
+                lang3: 'German (Intermediate)',
+                // Education
+                edu1Title: 'Diploma in Computer Engineering and Informatics',
+                edu1Company: 'University of Patras, School of Engineering',
+                edu1Desc: 'Thesis: "Low Code Development Platforms"',
+                edu2Title: 'Professional Seminars',
+                edu2Company: 'Various Institutions',
+                edu2Desc: 'Customer Service (Hellenic Customer Service Institute), Sales Strategy and Specialized Techniques (NOBACCO/BAT Hellas), Best Practices in Customer Service (NOBACCO)',
+                // Tags
+                tagLeadership: 'Leadership',
+                tagB2B: 'B2B',
+                tagOperations: 'Operations',
+                tagTeamMgmt: 'Team Management',
+                tagSales: 'Sales',
+                tagCustomerService: 'Customer Service',
+                tagStaffMgmt: 'Staff Management',
+                tagITSupport: 'IT Support',
+                tagHardware: 'Hardware',
+                tagSecurity: 'Security',
+                tagCustomerSupport: 'Customer Support',
+                tagTelecom: 'Telecommunications',
+                location: 'Patras, Greece'
+            },
+            el: {
+                about: 'Σχετικά',
+                experience: 'Εμπειρία',
+                skills: 'Δεξιότητες',
+                education: 'Εκπαίδευση',
+                contact: 'Επικοινωνία',
+                role: 'Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης',
+                summary: 'Αποτελεσματικός διευθυντής με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων, βελτιστοποίηση λειτουργιών και επίτευξη βιώσιμης ανάπτυξης. Συνδυάζει τεχνικό υπόβαθρο στη Μηχανική Υπολογιστών με αποδεδειγμένη ηγεσία στην επιχειρηματική ανάπτυξη.',
+                email: 'Email',
+                phone: 'Τηλέφωνο',
+                downloadCV: 'Λήψη Βιογραφικού',
+                experienceTitle: 'Εμπειρία',
+                skillsTitle: 'Δεξιότητες',
+                educationTitle: 'Εκπαίδευση',
+                contactTitle: 'Επικοινωνία',
+                // Experience
+                exp1Title: 'Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης',
+                exp1Company: 'NOBACCO, Ελλάδα',
+                exp1Desc: 'Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Δημιουργία B2B συνεργασιών και παρακολούθηση ανταγωνισμού.',
+                exp1Date: '2019 — Σήμερα',
+                exp2Title: 'Διευθυντής Καταστήματος',
+                exp2Company: 'NOBACCO, Ελλάδα',
+                exp2Desc: 'Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών. Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού.',
+                exp2Date: '2015 — 2019',
+                exp3Title: 'Διαχειριστής IT',
+                exp3Company: 'Internet Cafe Κ. Αχαΐα, Ελλάδα',
+                exp3Desc: 'Συντήρηση και αναβάθμιση συστημάτων hardware/software. Εφαρμογή πρωτοκόλλων ασφάλειας δεδομένων.',
+                exp3Date: '2010 — 2012',
+                exp4Title: 'Εκπρόσωπος Εξυπηρέτησης Πελατών',
+                exp4Company: 'ΟΤΕ Α.Ε., Ελλάδα',
+                exp4Desc: 'Παροχή υποστήριξης πελατών και προώθηση υπηρεσιών.',
+                exp4Date: '2004 — 2007',
+                // Skills
+                coreCompetencies: 'Βασικές Ικανότητες',
+                technical: 'Τεχνικές',
+                inProgress: 'Σε Εξέλιξη',
+                languages: 'Γλώσσες',
+                skill1: 'Στρατηγική Ηγεσία',
+                skill2: 'Ανάπτυξη Ομάδων',
+                skill3: 'Επιχειρηματικός Σχεδιασμός',
+                skill4: 'Διαχείριση Συνεργασιών',
+                skill5: 'Βελτιστοποίηση Διαδικασιών',
+                lang1: 'Ελληνικά (Μητρική)',
+                lang2: 'Αγγλικά (Proficiency)',
+                lang3: 'Γερμανικά (Mittelstufe)',
+                // Education
+                edu1Title: 'Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής',
+                edu1Company: 'Πανεπιστήμιο Πατρών, Πολυτεχνική Σχολή',
+                edu1Desc: 'Διπλωματική: "Low Code Development Platforms"',
+                edu2Title: 'Επαγγελματικά Σεμινάρια',
+                edu2Company: 'Διάφοροι Φορείς',
+                edu2Desc: 'Εξυπηρέτηση Πελατών (Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών), Στρατηγική Πωλήσεων (NOBACCO/BAT Hellas), Βέλτιστες Πρακτικές Εξυπηρέτησης (NOBACCO)',
+                // Tags
+                tagLeadership: 'Ηγεσία',
+                tagB2B: 'B2B',
+                tagOperations: 'Λειτουργίες',
+                tagTeamMgmt: 'Διαχείριση Ομάδας',
+                tagSales: 'Πωλήσεις',
+                tagCustomerService: 'Εξυπηρέτηση Πελατών',
+                tagStaffMgmt: 'Διαχείριση Προσωπικού',
+                tagITSupport: 'IT Υποστήριξη',
+                tagHardware: 'Hardware',
+                tagSecurity: 'Ασφάλεια',
+                tagCustomerSupport: 'Υποστήριξη Πελατών',
+                tagTelecom: 'Τηλεπικοινωνίες',
+                location: 'Πάτρα, Ελλάδα'
+            }
+        };
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            document.documentElement.setAttribute('data-lang', lang);
+            document.getElementById('langBtn').textContent = lang.toUpperCase();
+            
+            // Navigation
+            document.querySelector('nav a[href="#about"]').textContent = t.about;
+            document.querySelector('nav a[href="#experience"]').textContent = t.experience;
+            document.querySelector('nav a[href="#skills"]').textContent = t.skills;
+            document.querySelector('nav a[href="#education"]').textContent = t.education;
+            document.querySelector('nav a[href="#contact"]').textContent = t.contact;
+            
+            // About
+            document.querySelector('.intro-text .role').textContent = t.role;
+            document.querySelector('.intro-text p:not(.role)').textContent = t.summary;
+            document.querySelector('.intro-links a[href*="mailto"] span').textContent = t.email;
+            document.querySelector('.intro-links a[href*="tel"] span').textContent = t.phone;
+            document.querySelector('.intro-links a[onclick*="downloadCV"] span').textContent = t.downloadCV;
+            
+            // Section titles
+            document.querySelector('#experience .section-title').childNodes[0].textContent = t.experienceTitle;
+            document.querySelector('#skills .section-title').childNodes[0].textContent = t.skillsTitle;
+            document.querySelector('#education .section-title').childNodes[0].textContent = t.educationTitle;
+            document.querySelector('#contact .section-title').childNodes[0].textContent = t.contactTitle;
+            
+            // Experience items
+            const expItems = document.querySelectorAll('#experience .experience-item');
+            expItems[0].querySelector('h3').textContent = t.exp1Title;
+            expItems[0].querySelector('.exp-company').textContent = t.exp1Company;
+            expItems[0].querySelector('.exp-content > p:not(.exp-company)').textContent = t.exp1Desc;
+            expItems[0].querySelector('.exp-date').textContent = t.exp1Date;
+            
+            expItems[1].querySelector('h3').textContent = t.exp2Title;
+            expItems[1].querySelector('.exp-company').textContent = t.exp2Company;
+            expItems[1].querySelector('.exp-content > p:not(.exp-company)').textContent = t.exp2Desc;
+            expItems[1].querySelector('.exp-date').textContent = t.exp2Date;
+            
+            expItems[2].querySelector('h3').textContent = t.exp3Title;
+            expItems[2].querySelector('.exp-company').textContent = t.exp3Company;
+            expItems[2].querySelector('.exp-content > p:not(.exp-company)').textContent = t.exp3Desc;
+            expItems[2].querySelector('.exp-date').textContent = t.exp3Date;
+            
+            expItems[3].querySelector('h3').textContent = t.exp4Title;
+            expItems[3].querySelector('.exp-company').textContent = t.exp4Company;
+            expItems[3].querySelector('.exp-content > p:not(.exp-company)').textContent = t.exp4Desc;
+            expItems[3].querySelector('.exp-date').textContent = t.exp4Date;
+            
+            // Experience tags
+            const tags1 = expItems[0].querySelectorAll('.exp-tag');
+            tags1[0].textContent = t.tagLeadership;
+            tags1[1].textContent = t.tagB2B;
+            tags1[2].textContent = t.tagOperations;
+            tags1[3].textContent = t.tagTeamMgmt;
+            
+            const tags2 = expItems[1].querySelectorAll('.exp-tag');
+            tags2[0].textContent = t.tagSales;
+            tags2[1].textContent = t.tagCustomerService;
+            tags2[2].textContent = t.tagStaffMgmt;
+            
+            const tags3 = expItems[2].querySelectorAll('.exp-tag');
+            tags3[0].textContent = t.tagITSupport;
+            tags3[1].textContent = t.tagHardware;
+            tags3[2].textContent = t.tagSecurity;
+            
+            const tags4 = expItems[3].querySelectorAll('.exp-tag');
+            tags4[0].textContent = t.tagCustomerSupport;
+            tags4[1].textContent = t.tagTelecom;
+            
+            // Skills
+            const skillGroups = document.querySelectorAll('.skill-group');
+            skillGroups[0].querySelector('h3').textContent = t.coreCompetencies;
+            skillGroups[1].querySelector('h3').textContent = t.technical;
+            skillGroups[2].querySelector('h3').textContent = t.inProgress;
+            skillGroups[3].querySelector('h3').textContent = t.languages;
+            
+            const coreSkills = skillGroups[0].querySelectorAll('.skill-list span');
+            coreSkills[0].textContent = t.skill1;
+            coreSkills[1].textContent = t.skill2;
+            coreSkills[2].textContent = t.skill3;
+            coreSkills[3].textContent = t.skill4;
+            coreSkills[4].textContent = t.skill5;
+            
+            const langSkills = skillGroups[3].querySelectorAll('.skill-list span');
+            langSkills[0].textContent = t.lang1;
+            langSkills[1].textContent = t.lang2;
+            langSkills[2].textContent = t.lang3;
+            
+            // Education
+            const eduItems = document.querySelectorAll('#education .experience-item');
+            eduItems[0].querySelector('h3').textContent = t.edu1Title;
+            eduItems[0].querySelector('.exp-company').textContent = t.edu1Company;
+            eduItems[0].querySelector('.exp-content > p:not(.exp-company)').textContent = t.edu1Desc;
+            
+            eduItems[1].querySelector('h3').textContent = t.edu2Title;
+            eduItems[1].querySelector('.exp-company').textContent = t.edu2Company;
+            eduItems[1].querySelector('.exp-content > p:not(.exp-company)').textContent = t.edu2Desc;
+            
+            // Contact location
+            document.querySelector('.contact-item:last-child span').textContent = t.location;
+            
+            localStorage.setItem('lang', lang);
+        }
+
+        function toggleLanguage() {
+            const current = document.documentElement.getAttribute('data-lang') || 'en';
+            const next = current === 'en' ? 'el' : 'en';
+            setLanguage(next);
+        }
+
+        // Initialize language
+        (function() {
+            const saved = localStorage.getItem('lang') || 'en';
+            document.documentElement.setAttribute('data-lang', saved);
+            document.getElementById('langBtn').textContent = saved.toUpperCase();
+            if (saved === 'el') {
+                setLanguage('el');
+            }
+        })();
+    </script>
+</body>
+</html>
