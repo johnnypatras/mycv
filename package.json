@@ -1,0 +1,23 @@
+{
+  "name": "ialexopoulos-org",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bilingual personal CV site. All content lives in data/cv.json.",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:fast": "node build.mjs --no-pdf",
+    "check": "node check-links.mjs",
+    "serve": "node build.mjs --no-pdf && npx --yes serve dist -l 4321"
+  },
+  "devDependencies": {
+    "@fontsource-variable/commissioner": "^5.2.6",
+    "@fontsource-variable/karla": "^5.2.6",
+    "@fontsource-variable/literata": "^5.2.6",
+    "@fontsource/libre-baskerville": "^5.3.0",
+    "playwright": "^1.49.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

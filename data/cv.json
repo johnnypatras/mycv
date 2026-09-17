@@ -1,0 +1,209 @@
+{
+  "site": {
+    "origin": "https://www.ialexopoulos.org",
+    "defaultLang": "en",
+    "languages": ["en", "el"],
+    "themeColor": "#C45D3A",
+    "startYear": 2026
+  },
+  "shared": {
+    "name": "Ioannis Alexopoulos",
+    "initials": "IA",
+    "email": "i.alexopoulos@protonmail.com",
+    "phoneDisplay": "+30 697 803 6458",
+    "phoneHref": "+306978036458",
+    "linkedin": "https://linkedin.com/in/ialexop",
+    "github": "https://github.com/johnnypatras",
+    "jobTitleEn": "Regional & Business Development Manager",
+    "employer": "NOBACCO",
+    "alumniOf": "University of Patras",
+    "addressLocality": "Patras",
+    "addressCountry": "GR"
+  },
+  "en": {
+    "meta": {
+      "lang": "en",
+      "locale": "en_GB",
+      "name": "Ioannis Alexopoulos",
+      "pageTitle": "Ioannis Alexopoulos — Regional & Business Development Manager",
+      "description": "Regional & Business Development Manager with 15+ years of experience leading teams, optimising operations and driving growth. Computer Engineering background. Based in Patras, Greece.",
+      "langLabel": "EN",
+      "switchLabel": "ΕΛ",
+      "switchTitle": "Προβολή στα Ελληνικά"
+    },
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "skills": "Skills",
+      "education": "Education",
+      "contact": "Contact"
+    },
+    "ui": {
+      "email": "Email",
+      "phone": "Phone",
+      "downloadCV": "Download CV",
+      "location": "Patras, Greece",
+      "menuLabel": "Toggle menu",
+      "themeLabel": "Toggle theme",
+      "skipToContent": "Skip to content",
+      "pdfNote": "PDF"
+    },
+    "hero": {
+      "role": "Regional & Business Development Manager",
+      "summary": "Results-driven manager with 15+ years of experience leading teams, optimizing operations, and driving sustained growth. Combining a technical background in Computer Engineering with proven leadership in business development."
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "date": "2019 — Now",
+          "title": "Regional & Business Development Manager",
+          "company": "NOBACCO, Greece",
+          "desc": "Directing regional operations, ensuring compliance with corporate policies and optimizing ROI. Supervising and developing a team of 30 employees. Building B2B partnerships and monitoring competitor activity.",
+          "tags": ["Leadership", "B2B", "Operations", "Team Management"]
+        },
+        {
+          "date": "2015 — 2019",
+          "title": "Store Manager",
+          "company": "NOBACCO, Greece",
+          "desc": "Achieved consistent sales targets and ensured customer satisfaction. Oversaw staff scheduling and performance management.",
+          "tags": ["Sales", "Customer Service", "Staff Management"]
+        },
+        {
+          "date": "2010 — 2012",
+          "title": "IT Administrator",
+          "company": "Internet Cafe K. Achaia, Greece",
+          "desc": "Maintained and upgraded hardware/software systems. Implemented data security protocols.",
+          "tags": ["IT Support", "Hardware", "Security"]
+        },
+        {
+          "date": "2004 — 2007",
+          "title": "Customer Service Representative",
+          "company": "OTE S.A., Greece",
+          "desc": "Delivered frontline customer support and promoted services.",
+          "tags": ["Customer Support", "Telecommunications"]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "groups": [
+        { "title": "Core Competencies", "items": ["Strategic Leadership", "Team Development", "Business Planning", "Partnership Management", "Process Optimization"] },
+        { "title": "Technical", "items": ["Python", "Java / JavaScript", "SQL", "HTML5 / CSS", "LaTeX"] },
+        { "title": "In Progress", "items": ["Professional Scrum Master", "CS50P (Harvard)", "CS50AI (Harvard)", "Oracle Java Foundations"] },
+        { "title": "Languages", "items": ["Greek (Native)", "English (Proficiency)", "German (Intermediate)"] }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "date": "2019",
+          "title": "Diploma in Computer Engineering and Informatics",
+          "company": "University of Patras, School of Engineering",
+          "desc": "Thesis: \"Low Code Development Platforms\""
+        },
+        {
+          "date": "2017 — 2024",
+          "title": "Professional Seminars",
+          "company": "Various Institutions",
+          "desc": "Customer Service (Hellenic Customer Service Institute), Sales Strategy and Specialized Techniques (NOBACCO/BAT Hellas), Best Practices in Customer Service (NOBACCO)"
+        }
+      ]
+    },
+    "contact": { "title": "Get in Touch" }
+  },
+  "el": {
+    "meta": {
+      "lang": "el",
+      "locale": "el_GR",
+      "name": "Ιωάννης Αλεξόπουλος",
+      "pageTitle": "Ιωάννης Αλεξόπουλος — Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
+      "description": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων και τη βιώσιμη ανάπτυξη. Διπλωματούχος Μηχανικός Η/Υ και Πληροφορικής. Πάτρα, Ελλάδα.",
+      "langLabel": "ΕΛ",
+      "switchLabel": "EN",
+      "switchTitle": "View in English"
+    },
+    "nav": {
+      "about": "Σχετικά",
+      "experience": "Εμπειρία",
+      "skills": "Δεξιότητες",
+      "education": "Εκπαίδευση",
+      "contact": "Επικοινωνία"
+    },
+    "ui": {
+      "email": "Email",
+      "phone": "Τηλέφωνο",
+      "downloadCV": "Λήψη Βιογραφικού",
+      "location": "Πάτρα, Ελλάδα",
+      "menuLabel": "Εναλλαγή μενού",
+      "themeLabel": "Εναλλαγή θέματος",
+      "skipToContent": "Μετάβαση στο περιεχόμενο",
+      "pdfNote": "PDF"
+    },
+    "hero": {
+      "role": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
+      "summary": "Αποτελεσματικός διευθυντής με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων, βελτιστοποίηση λειτουργιών και επίτευξη βιώσιμης ανάπτυξης. Συνδυάζει τεχνικό υπόβαθρο στη Μηχανική Υπολογιστών με αποδεδειγμένη ηγεσία στην επιχειρηματική ανάπτυξη."
+    },
+    "experience": {
+      "title": "Εμπειρία",
+      "items": [
+        {
+          "date": "2019 — Σήμερα",
+          "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
+          "company": "NOBACCO, Ελλάδα",
+          "desc": "Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Δημιουργία B2B συνεργασιών και παρακολούθηση ανταγωνισμού.",
+          "tags": ["Ηγεσία", "B2B", "Λειτουργίες", "Διαχείριση Ομάδας"]
+        },
+        {
+          "date": "2015 — 2019",
+          "title": "Διευθυντής Καταστήματος",
+          "company": "NOBACCO, Ελλάδα",
+          "desc": "Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών. Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού.",
+          "tags": ["Πωλήσεις", "Εξυπηρέτηση Πελατών", "Διαχείριση Προσωπικού"]
+        },
+        {
+          "date": "2010 — 2012",
+          "title": "Διαχειριστής IT",
+          "company": "Internet Cafe Κ. Αχαΐα, Ελλάδα",
+          "desc": "Συντήρηση και αναβάθμιση συστημάτων hardware/software. Εφαρμογή πρωτοκόλλων ασφάλειας δεδομένων.",
+          "tags": ["IT Υποστήριξη", "Hardware", "Ασφάλεια"]
+        },
+        {
+          "date": "2004 — 2007",
+          "title": "Εκπρόσωπος Εξυπηρέτησης Πελατών",
+          "company": "ΟΤΕ Α.Ε., Ελλάδα",
+          "desc": "Παροχή υποστήριξης πελατών και προώθηση υπηρεσιών.",
+          "tags": ["Υποστήριξη Πελατών", "Τηλεπικοινωνίες"]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Δεξιότητες",
+      "groups": [
+        { "title": "Βασικές Ικανότητες", "items": ["Στρατηγική Ηγεσία", "Ανάπτυξη Ομάδων", "Επιχειρηματικός Σχεδιασμός", "Διαχείριση Συνεργασιών", "Βελτιστοποίηση Διαδικασιών"] },
+        { "title": "Τεχνικές", "items": ["Python", "Java / JavaScript", "SQL", "HTML5 / CSS", "LaTeX"] },
+        { "title": "Σε Εξέλιξη", "items": ["Professional Scrum Master", "CS50P (Harvard)", "CS50AI (Harvard)", "Oracle Java Foundations"] },
+        { "title": "Γλώσσες", "items": ["Ελληνικά (Μητρική)", "Αγγλικά (Proficiency)", "Γερμανικά (Mittelstufe)"] }
+      ]
+    },
+    "education": {
+      "title": "Εκπαίδευση",
+      "items": [
+        {
+          "date": "2019",
+          "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
+          "company": "Πανεπιστήμιο Πατρών, Πολυτεχνική Σχολή",
+          "desc": "Διπλωματική: \"Low Code Development Platforms\""
+        },
+        {
+          "date": "2017 — 2024",
+          "title": "Επαγγελματικά Σεμινάρια",
+          "company": "Διάφοροι Φορείς",
+          "desc": "Εξυπηρέτηση Πελατών (Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών), Στρατηγική Πωλήσεων (NOBACCO/BAT Hellas), Βέλτιστες Πρακτικές Εξυπηρέτησης (NOBACCO)"
+        }
+      ]
+    },
+    "contact": { "title": "Επικοινωνία" }
+  }
+}
