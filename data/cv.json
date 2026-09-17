@@ -2,14 +2,17 @@
   "site": {
     "origin": "https://www.ialexopoulos.org",
     "defaultLang": "en",
-    "languages": ["en", "el"],
+    "languages": [
+      "en",
+      "el"
+    ],
     "themeColor": "#C45D3A",
     "startYear": 2026
   },
   "shared": {
     "name": "Ioannis Alexopoulos",
     "initials": "IA",
-    "email": "i.alexopoulos@protonmail.com",
+    "email": "contact@ialexopoulos.org",
     "phoneDisplay": "+30 697 803 6458",
     "phoneHref": "+306978036458",
     "linkedin": "https://linkedin.com/in/ialexop",
@@ -60,38 +63,87 @@
           "title": "Regional & Business Development Manager",
           "company": "NOBACCO, Greece",
           "desc": "Directing regional operations, ensuring compliance with corporate policies and optimizing ROI. Supervising and developing a team of 30 employees. Building B2B partnerships and monitoring competitor activity.",
-          "tags": ["Leadership", "B2B", "Operations", "Team Management"]
+          "tags": [
+            "Leadership",
+            "B2B",
+            "Operations",
+            "Team Management"
+          ]
         },
         {
           "date": "2015 — 2019",
           "title": "Store Manager",
           "company": "NOBACCO, Greece",
           "desc": "Achieved consistent sales targets and ensured customer satisfaction. Oversaw staff scheduling and performance management.",
-          "tags": ["Sales", "Customer Service", "Staff Management"]
+          "tags": [
+            "Sales",
+            "Customer Service",
+            "Staff Management"
+          ]
         },
         {
           "date": "2010 — 2012",
           "title": "IT Administrator",
           "company": "Internet Cafe K. Achaia, Greece",
           "desc": "Maintained and upgraded hardware/software systems. Implemented data security protocols.",
-          "tags": ["IT Support", "Hardware", "Security"]
+          "tags": [
+            "IT Support",
+            "Hardware",
+            "Security"
+          ]
         },
         {
           "date": "2004 — 2007",
           "title": "Customer Service Representative",
           "company": "OTE S.A., Greece",
           "desc": "Delivered frontline customer support and promoted services.",
-          "tags": ["Customer Support", "Telecommunications"]
+          "tags": [
+            "Customer Support",
+            "Telecommunications"
+          ]
         }
       ]
     },
     "skills": {
       "title": "Skills",
       "groups": [
-        { "title": "Core Competencies", "items": ["Strategic Leadership", "Team Development", "Business Planning", "Partnership Management", "Process Optimization"] },
-        { "title": "Technical", "items": ["Python", "Java / JavaScript", "SQL", "HTML5 / CSS", "LaTeX"] },
-        { "title": "In Progress", "items": ["Professional Scrum Master", "CS50P (Harvard)", "CS50AI (Harvard)", "Oracle Java Foundations"] },
-        { "title": "Languages", "items": ["Greek (Native)", "English (Proficiency)", "German (Intermediate)"] }
+        {
+          "title": "Core Competencies",
+          "items": [
+            "Strategic Leadership",
+            "Team Development",
+            "Business Planning",
+            "Partnership Management",
+            "Process Optimization"
+          ]
+        },
+        {
+          "title": "Technical",
+          "items": [
+            "Python",
+            "Java / JavaScript",
+            "SQL",
+            "HTML5 / CSS",
+            "LaTeX"
+          ]
+        },
+        {
+          "title": "In Progress",
+          "items": [
+            "Professional Scrum Master",
+            "CS50P (Harvard)",
+            "CS50AI (Harvard)",
+            "Oracle Java Foundations"
+          ]
+        },
+        {
+          "title": "Languages",
+          "items": [
+            "Greek (Native)",
+            "English (Proficiency)",
+            "German (Intermediate)"
+          ]
+        }
       ]
     },
     "education": {
@@ -111,7 +163,9 @@
         }
       ]
     },
-    "contact": { "title": "Get in Touch" }
+    "contact": {
+      "title": "Get in Touch"
+    }
   },
   "el": {
     "meta": {
@@ -153,38 +207,87 @@
           "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
           "company": "NOBACCO, Ελλάδα",
           "desc": "Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Δημιουργία B2B συνεργασιών και παρακολούθηση ανταγωνισμού.",
-          "tags": ["Ηγεσία", "B2B", "Λειτουργίες", "Διαχείριση Ομάδας"]
+          "tags": [
+            "Ηγεσία",
+            "B2B",
+            "Λειτουργίες",
+            "Διαχείριση Ομάδας"
+          ]
         },
         {
           "date": "2015 — 2019",
           "title": "Διευθυντής Καταστήματος",
           "company": "NOBACCO, Ελλάδα",
           "desc": "Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών. Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού.",
-          "tags": ["Πωλήσεις", "Εξυπηρέτηση Πελατών", "Διαχείριση Προσωπικού"]
+          "tags": [
+            "Πωλήσεις",
+            "Εξυπηρέτηση Πελατών",
+            "Διαχείριση Προσωπικού"
+          ]
         },
         {
           "date": "2010 — 2012",
           "title": "Διαχειριστής IT",
           "company": "Internet Cafe Κ. Αχαΐα, Ελλάδα",
           "desc": "Συντήρηση και αναβάθμιση συστημάτων hardware/software. Εφαρμογή πρωτοκόλλων ασφάλειας δεδομένων.",
-          "tags": ["IT Υποστήριξη", "Hardware", "Ασφάλεια"]
+          "tags": [
+            "IT Υποστήριξη",
+            "Hardware",
+            "Ασφάλεια"
+          ]
         },
         {
           "date": "2004 — 2007",
           "title": "Εκπρόσωπος Εξυπηρέτησης Πελατών",
           "company": "ΟΤΕ Α.Ε., Ελλάδα",
           "desc": "Παροχή υποστήριξης πελατών και προώθηση υπηρεσιών.",
-          "tags": ["Υποστήριξη Πελατών", "Τηλεπικοινωνίες"]
+          "tags": [
+            "Υποστήριξη Πελατών",
+            "Τηλεπικοινωνίες"
+          ]
         }
       ]
     },
     "skills": {
       "title": "Δεξιότητες",
       "groups": [
-        { "title": "Βασικές Ικανότητες", "items": ["Στρατηγική Ηγεσία", "Ανάπτυξη Ομάδων", "Επιχειρηματικός Σχεδιασμός", "Διαχείριση Συνεργασιών", "Βελτιστοποίηση Διαδικασιών"] },
-        { "title": "Τεχνικές", "items": ["Python", "Java / JavaScript", "SQL", "HTML5 / CSS", "LaTeX"] },
-        { "title": "Σε Εξέλιξη", "items": ["Professional Scrum Master", "CS50P (Harvard)", "CS50AI (Harvard)", "Oracle Java Foundations"] },
-        { "title": "Γλώσσες", "items": ["Ελληνικά (Μητρική)", "Αγγλικά (Proficiency)", "Γερμανικά (Mittelstufe)"] }
+        {
+          "title": "Βασικές Ικανότητες",
+          "items": [
+            "Στρατηγική Ηγεσία",
+            "Ανάπτυξη Ομάδων",
+            "Επιχειρηματικός Σχεδιασμός",
+            "Διαχείριση Συνεργασιών",
+            "Βελτιστοποίηση Διαδικασιών"
+          ]
+        },
+        {
+          "title": "Τεχνικές",
+          "items": [
+            "Python",
+            "Java / JavaScript",
+            "SQL",
+            "HTML5 / CSS",
+            "LaTeX"
+          ]
+        },
+        {
+          "title": "Σε Εξέλιξη",
+          "items": [
+            "Professional Scrum Master",
+            "CS50P (Harvard)",
+            "CS50AI (Harvard)",
+            "Oracle Java Foundations"
+          ]
+        },
+        {
+          "title": "Γλώσσες",
+          "items": [
+            "Ελληνικά (Μητρική)",
+            "Αγγλικά (Proficiency)",
+            "Γερμανικά (Mittelstufe)"
+          ]
+        }
       ]
     },
     "education": {
@@ -204,6 +307,8 @@
         }
       ]
     },
-    "contact": { "title": "Επικοινωνία" }
+    "contact": {
+      "title": "Επικοινωνία"
+    }
   }
 }
