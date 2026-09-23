@@ -18,7 +18,6 @@
     "linkedin": "https://linkedin.com/in/ialexop",
     "github": "https://github.com/johnnypatras",
     "jobTitleEn": "Regional & Business Development Manager",
-    "employer": "NOBACCO",
     "alumniOf": "University of Patras",
     "addressLocality": "Patras",
     "addressCountry": "GR"
@@ -59,10 +58,10 @@
       "title": "Experience",
       "items": [
         {
-          "date": "2019 — Now",
+          "date": "2019 — 2025",
           "title": "Regional & Business Development Manager",
           "company": "NOBACCO, Greece",
-          "desc": "Directing regional operations, ensuring compliance with corporate policies and optimizing ROI. Supervising and developing a team of 30 employees. Building B2B partnerships and monitoring competitor activity.",
+          "desc": "Directed regional operations, ensuring compliance with corporate policies and optimising ROI. Supervised and developed a team of 30 employees. Launched and supported eight franchisees. Secured retail distribution through wholesalers in seven areas and built B2B partnerships.",
           "tags": [
             "Leadership",
             "B2B",
@@ -203,10 +202,10 @@
       "title": "Εμπειρία",
       "items": [
         {
-          "date": "2019 — Σήμερα",
+          "date": "2019 — 2025",
           "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
           "company": "NOBACCO, Ελλάδα",
-          "desc": "Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Δημιουργία B2B συνεργασιών και παρακολούθηση ανταγωνισμού.",
+          "desc": "Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Έναρξη λειτουργίας και υποστήριξη οκτώ καταστημάτων franchise. Συμφωνίες χονδρικής διάθεσης σε επτά περιοχές και ανάπτυξη συνεργασιών B2B.",
           "tags": [
             "Ηγεσία",
             "B2B",
@@ -216,7 +215,7 @@
         },
         {
           "date": "2015 — 2019",
-          "title": "Διευθυντής Καταστήματος",
+          "title": "Υπεύθυνος Καταστήματος",
           "company": "NOBACCO, Ελλάδα",
           "desc": "Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών. Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού.",
           "tags": [

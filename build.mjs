@@ -112,7 +112,7 @@ function head(lang) {
       addressLocality: shared.addressLocality,
       addressCountry: shared.addressCountry
     },
-    worksFor: { '@type': 'Organization', name: shared.employer },
+    ...(shared.employer ? { worksFor: { '@type': 'Organization', name: shared.employer } } : {}),
     alumniOf: { '@type': 'CollegeOrUniversity', name: shared.alumniOf },
     knowsLanguage: ['el', 'en', 'de'],
     sameAs: [shared.linkedin, shared.github]
