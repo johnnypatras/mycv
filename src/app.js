@@ -1,79 +1,62 @@
 /* ialexopoulos.org — progressive enhancement only.
- * Every word of content is already in the HTML; this file adds theme,
- * menu, scroll-spy and reveal animations. The page works without it. */
+ * Every word of content is already in the HTML; this adds the theme toggle,
+ * the active-section highlight in the nav, and opens the collapsed role
+ * details before printing. The page works fully without it. */
 (function () {
   'use strict';
 
   var root = document.documentElement;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* -- remember which language this visitor chose, for the "/" router ----- */
   try { localStorage.setItem('lang', root.lang || 'en'); } catch (e) {}
 
-  /* -- theme -------------------------------------------------------------- */
+  /* -- theme --------------------------------------------------------------
+   * No stored choice: CSS follows the system setting (light when there is
+   * none). A click stores an explicit choice, which then wins. */
   var media = window.matchMedia('(prefers-color-scheme: dark)');
   var btn = document.getElementById('themeBtn');
 
-  function paint(theme) {
-    root.setAttribute('data-theme', theme);
-    if (btn) {
-      btn.textContent = theme === 'dark' ? '🌙' : '☀️';
-      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-    }
+  function current() {
+    return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
   }
-  function stored() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
-
-  paint(stored() || (media.matches ? 'dark' : 'light'));
-
+  function label() {
+    if (!btn) return;
+    var dark = current() === 'dark';
+    btn.textContent = dark ? btn.getAttribute('data-light') : btn.getAttribute('data-dark');
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
   if (btn) {
     btn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
-      paint(next);
+      label();
     });
   }
-  media.addEventListener('change', function (e) {
-    if (!stored()) paint(e.matches ? 'dark' : 'light');
-  });
-
-  /* -- mobile menu -------------------------------------------------------- */
-  var nav = document.getElementById('nav');
-  var menuBtn = document.getElementById('menuBtn');
-
-  function setMenu(open) {
-    if (!nav || !menuBtn) return;
-    nav.classList.toggle('open', open);
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-  if (menuBtn) {
-    menuBtn.addEventListener('click', function () {
-      setMenu(!nav.classList.contains('open'));
-    });
-  }
-  if (nav) {
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) setMenu(false);
-    });
-  }
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') setMenu(false);
-  });
+  media.addEventListener('change', label);
+  label();
 
   /* -- active section in the nav ------------------------------------------ */
-  var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
-  var sections = links
-    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
-    .filter(Boolean);
-
-  if ('IntersectionObserver' in window && sections.length) {
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a[data-sec]'));
+  if ('IntersectionObserver' in window && links.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         links.forEach(function (a) {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          var on = a.getAttribute('data-sec') === entry.target.id;
+          a.classList.toggle('on', on);
+          if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
         });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    sections.forEach(function (s) { spy.observe(s); });
+    links.forEach(function (a) {
+      var s = document.getElementById(a.getAttribute('data-sec'));
+      if (s) spy.observe(s);
+    });
   }
+
+  /* -- printing from the browser shows the full scope of each role -------- */
+  window.addEventListener('beforeprint', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) { d.open = true; });
+  });
 })();

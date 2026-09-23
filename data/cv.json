@@ -6,18 +6,17 @@
       "en",
       "el"
     ],
-    "themeColor": "#C45D3A",
+    "themeColor": "#1E4B6B",
     "startYear": 2026
   },
   "shared": {
     "name": "Ioannis Alexopoulos",
-    "initials": "IA",
     "email": "contact@ialexopoulos.org",
     "phoneDisplay": "+30 697 803 6458",
     "phoneHref": "+306978036458",
     "linkedin": "https://linkedin.com/in/ialexop",
     "github": "https://github.com/johnnypatras",
-    "jobTitleEn": "Regional & Business Development Manager",
+    "jobTitleEn": "Operations & Business Development · Computer Engineer",
     "alumniOf": "University of Patras",
     "addressLocality": "Patras",
     "addressCountry": "GR"
@@ -27,287 +26,367 @@
       "lang": "en",
       "locale": "en_GB",
       "name": "Ioannis Alexopoulos",
-      "pageTitle": "Ioannis Alexopoulos — Regional & Business Development Manager",
-      "description": "Regional & Business Development Manager with 15+ years of experience leading teams, optimising operations and driving growth. Computer Engineering background. Based in Patras, Greece.",
-      "langLabel": "EN",
+      "pageTitle": "Ioannis Alexopoulos — Operations & Business Development",
+      "description": "Operations and business development manager with 15+ years leading teams, and a Diploma in Computer Engineering and Informatics. Based in Patras, Greece.",
       "switchLabel": "ΕΛ",
-      "switchTitle": "Προβολή στα Ελληνικά"
-    },
-    "nav": {
-      "about": "About",
-      "experience": "Experience",
-      "skills": "Skills",
-      "education": "Education",
-      "contact": "Contact"
+      "switchTitle": "Ελληνικά"
     },
     "ui": {
-      "email": "Email",
-      "phone": "Phone",
-      "downloadCV": "Download CV",
-      "location": "Patras, Greece",
-      "menuLabel": "Toggle menu",
-      "themeLabel": "Toggle theme",
-      "skipToContent": "Skip to content",
-      "pdfNote": "PDF"
+      "nav": {
+        "about": "About",
+        "experience": "Experience",
+        "skills": "Skills",
+        "education": "Education"
+      },
+      "place": "Patras, Achaia",
+      "cv": "Download CV ↓",
+      "more": "Full scope of the role",
+      "dark": "Dark",
+      "light": "Light",
+      "skip": "Skip to content",
+      "menu": "Sections"
     },
-    "hero": {
-      "role": "Regional & Business Development Manager",
-      "summary": "Results-driven manager with 15+ years of experience leading teams, optimizing operations, and driving sustained growth. Combining a technical background in Computer Engineering with proven leadership in business development."
+    "role": "Operations & Business Development",
+    "roleAt": "Computer Engineer",
+    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, rose from store manager to regional manager responsible for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Holds a Diploma in Computer Engineering and Informatics, combining technical expertise with leadership in business development. Now pursuing certifications in project management and modern technologies, and looking for roles that bring operations and technology together.",
+    "h": {
+      "exp": "Experience",
+      "skills": "Skills",
+      "edu": "Education",
+      "sem": "Seminars",
+      "lang": "Languages"
     },
-    "experience": {
-      "title": "Experience",
-      "items": [
-        {
-          "date": "2019 — 2025",
-          "title": "Regional & Business Development Manager",
-          "company": "NOBACCO, Greece",
-          "desc": "Directed regional operations, ensuring compliance with corporate policies and optimising ROI. Supervised and developed a team of 30 employees. Launched and supported eight franchisees. Secured retail distribution through wholesalers in seven areas and built B2B partnerships.",
-          "tags": [
-            "Leadership",
-            "B2B",
-            "Operations",
-            "Team Management"
-          ]
-        },
-        {
-          "date": "2015 — 2019",
-          "title": "Store Manager",
-          "company": "NOBACCO, Greece",
-          "desc": "Achieved consistent sales targets and ensured customer satisfaction. Oversaw staff scheduling and performance management.",
-          "tags": [
-            "Sales",
-            "Customer Service",
-            "Staff Management"
-          ]
-        },
-        {
-          "date": "2010 — 2012",
-          "title": "IT Administrator",
-          "company": "Internet Cafe K. Achaia, Greece",
-          "desc": "Maintained and upgraded hardware/software systems. Implemented data security protocols.",
-          "tags": [
-            "IT Support",
-            "Hardware",
-            "Security"
-          ]
-        },
-        {
-          "date": "2004 — 2007",
-          "title": "Customer Service Representative",
-          "company": "OTE S.A., Greece",
-          "desc": "Delivered frontline customer support and promoted services.",
-          "tags": [
-            "Customer Support",
-            "Telecommunications"
-          ]
-        }
-      ]
-    },
-    "skills": {
-      "title": "Skills",
-      "groups": [
-        {
-          "title": "Core Competencies",
-          "items": [
-            "Strategic Leadership",
-            "Team Development",
-            "Business Planning",
-            "Partnership Management",
-            "Process Optimization"
-          ]
-        },
-        {
-          "title": "Technical",
-          "items": [
-            "Python",
-            "Java / JavaScript",
-            "SQL",
-            "HTML5 / CSS",
-            "LaTeX"
-          ]
-        },
-        {
-          "title": "In Progress",
-          "items": [
-            "Professional Scrum Master",
-            "CS50P (Harvard)",
-            "CS50AI (Harvard)",
-            "Oracle Java Foundations"
-          ]
-        },
-        {
-          "title": "Languages",
-          "items": [
-            "Greek (Native)",
-            "English (Proficiency)",
-            "German (Intermediate)"
-          ]
-        }
-      ]
-    },
-    "education": {
-      "title": "Education",
-      "items": [
-        {
-          "date": "2019",
-          "title": "Diploma in Computer Engineering and Informatics",
-          "company": "University of Patras, School of Engineering",
-          "desc": "Thesis: \"Low Code Development Platforms\""
-        },
-        {
-          "date": "2017 — 2024",
-          "title": "Professional Seminars",
-          "company": "Various Institutions",
-          "desc": "Customer Service (Hellenic Customer Service Institute), Sales Strategy and Specialized Techniques (NOBACCO/BAT Hellas), Best Practices in Customer Service (NOBACCO)"
-        }
-      ]
-    },
-    "contact": {
-      "title": "Get in Touch"
-    }
+    "jobs": [
+      {
+        "co": "NOBACCO",
+        "meta": "Greece · 2015 — 2025",
+        "roles": [
+          {
+            "date": "2019 — 2025",
+            "title": "Regional & Business Development Manager",
+            "pts": [
+              "Ran regional operations across NOBACCO stores: policy compliance, operating expenses and ROI",
+              "Led a team of 30 — on-the-job training, annual evaluations and recruitment",
+              "Launched eight franchisees and supported them with training, advice and performance monitoring",
+              "Secured retail distribution through wholesalers in seven areas: Achaia, Aitoloakarnania, Argolida, Corinthia, Laconia, Messinia and the Ionian Islands"
+            ],
+            "scope": [
+              {
+                "h": "Operations",
+                "items": [
+                  "Ensured compliance with company policies and procedures",
+                  "Managed operating expenses and analysed ROI",
+                  "Collaborated on commercial and promotional projects",
+                  "Monitored competitors and customer preferences",
+                  "Handled customer complaints"
+                ]
+              },
+              {
+                "h": "People",
+                "items": [
+                  "Supervised 30 employees across NOBACCO stores",
+                  "Advised, trained and monitored eight franchisees",
+                  "Provided on-the-job training and identified training needs",
+                  "Created training materials and tools",
+                  "Conducted annual employee evaluations",
+                  "Planned and took part in recruitment"
+                ]
+              },
+              {
+                "h": "Business development",
+                "items": [
+                  "Identified new B2B collaboration opportunities and negotiated wholesale distribution",
+                  "Supported and grew existing partnerships",
+                  "Worked with partner companies to improve market efficiency",
+                  "Monitored B2B output and net retail sales, in regular contact with partner owners and managers"
+                ]
+              }
+            ]
+          },
+          {
+            "date": "2015 — 2019",
+            "title": "Store Manager",
+            "pts": [
+              "Met the store’s monthly, quarterly and annual targets",
+              "Managed staff, work schedules and the warehouse",
+              "Upheld the company’s customer-service standards and carried corporate communication to the team"
+            ]
+          }
+        ]
+      },
+      {
+        "date": "2010 — 2012",
+        "title": "IT Administrator",
+        "org": "Internet café · Kato Achaia",
+        "pts": [
+          "Maintained and upgraded computers, peripherals and the local network",
+          "Ran incremental backups and kept data secure",
+          "Provided technical support and fast troubleshooting"
+        ]
+      },
+      {
+        "date": "2004 — 2007",
+        "title": "Customer Service Representative",
+        "org": "OTE S.A. · Greece",
+        "pts": [
+          "Handled customer enquiries, complaints and escalations",
+          "Advised customers on products and services"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "wide": true,
+        "h": "In progress",
+        "text": "Professional Scrum Master (PSM) · CS50P and CS50AI, Harvard · Oracle Java Foundations"
+      },
+      {
+        "h": "Management",
+        "wide": true,
+        "text": "Strategic leadership and team development · Business planning and partnership management · Analytical problem-solving and process optimisation"
+      },
+      {
+        "h": "Applied",
+        "text": "Python",
+        "sub": "Six months on a company project",
+        "mono": true
+      },
+      {
+        "h": "Academic",
+        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "mono": true
+      },
+      {
+        "wide": true,
+        "h": "Tools",
+        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX · Microsoft Office"
+      }
+    ],
+    "edu": [
+      {
+        "date": "2019",
+        "title": "Diploma in Computer Engineering and Informatics",
+        "org": "University of Patras · School of Engineering",
+        "note": "Thesis: “Low Code Development Platforms”"
+      }
+    ],
+    "sem": [
+      {
+        "date": "2017 — 2024",
+        "title": "Customer Service",
+        "org": "Hellenic Customer Service Institute · 2017–2019 and 2022–2024"
+      },
+      {
+        "date": "2018",
+        "title": "Sales Strategy and Specialised Techniques",
+        "org": "NOBACCO S.A. / BAT Hellas"
+      },
+      {
+        "date": "2017",
+        "title": "Best Practices in Customer Service",
+        "org": "NOBACCO S.A."
+      }
+    ],
+    "languages": [
+      {
+        "lvl": "Native",
+        "name": "Greek",
+        "cert": ""
+      },
+      {
+        "lvl": "C2",
+        "name": "English",
+        "cert": "Certificate of Proficiency in English · University of Michigan"
+      },
+      {
+        "lvl": "C1",
+        "name": "German",
+        "cert": "Zentrale Mittelstufenprüfung · Goethe-Institut"
+      }
+    ]
   },
   "el": {
     "meta": {
       "lang": "el",
       "locale": "el_GR",
       "name": "Ιωάννης Αλεξόπουλος",
-      "pageTitle": "Ιωάννης Αλεξόπουλος — Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
-      "description": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων και τη βιώσιμη ανάπτυξη. Διπλωματούχος Μηχανικός Η/Υ και Πληροφορικής. Πάτρα, Ελλάδα.",
-      "langLabel": "ΕΛ",
+      "pageTitle": "Ιωάννης Αλεξόπουλος — Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
+      "description": "Στέλεχος διοίκησης λειτουργιών και επιχειρηματικής ανάπτυξης με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων. Διπλωματούχος Μηχανικός Η/Υ και Πληροφορικής. Πάτρα.",
       "switchLabel": "EN",
-      "switchTitle": "View in English"
-    },
-    "nav": {
-      "about": "Σχετικά",
-      "experience": "Εμπειρία",
-      "skills": "Δεξιότητες",
-      "education": "Εκπαίδευση",
-      "contact": "Επικοινωνία"
+      "switchTitle": "English"
     },
     "ui": {
-      "email": "Email",
-      "phone": "Τηλέφωνο",
-      "downloadCV": "Λήψη Βιογραφικού",
-      "location": "Πάτρα, Ελλάδα",
-      "menuLabel": "Εναλλαγή μενού",
-      "themeLabel": "Εναλλαγή θέματος",
-      "skipToContent": "Μετάβαση στο περιεχόμενο",
-      "pdfNote": "PDF"
+      "nav": {
+        "about": "Προφίλ",
+        "experience": "Εμπειρία",
+        "skills": "Δεξιότητες",
+        "education": "Εκπαίδευση"
+      },
+      "place": "Πάτρα, Αχαΐα",
+      "cv": "Βιογραφικό (PDF) ↓",
+      "more": "Αναλυτικά οι αρμοδιότητες",
+      "dark": "Σκοτεινό",
+      "light": "Φωτεινό",
+      "skip": "Μετάβαση στο περιεχόμενο",
+      "menu": "Ενότητες"
     },
-    "hero": {
-      "role": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
-      "summary": "Αποτελεσματικός διευθυντής με 15+ χρόνια εμπειρίας στη διοίκηση ομάδων, βελτιστοποίηση λειτουργιών και επίτευξη βιώσιμης ανάπτυξης. Συνδυάζει τεχνικό υπόβαθρο στη Μηχανική Υπολογιστών με αποδεδειγμένη ηγεσία στην επιχειρηματική ανάπτυξη."
+    "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
+    "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",
+    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Παρακολούθηση προγραμμάτων πιστοποίησης στη διαχείριση έργων και στις σύγχρονες τεχνολογίες, με ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
+    "h": {
+      "exp": "Επαγγελματική εμπειρία",
+      "skills": "Δεξιότητες",
+      "edu": "Σπουδές",
+      "sem": "Σεμινάρια",
+      "lang": "Ξένες γλώσσες"
     },
-    "experience": {
-      "title": "Εμπειρία",
-      "items": [
-        {
-          "date": "2019 — 2025",
-          "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
-          "company": "NOBACCO, Ελλάδα",
-          "desc": "Διεύθυνση περιφερειακών λειτουργιών, διασφάλιση συμμόρφωσης με εταιρικές πολιτικές και βελτιστοποίηση ROI. Επίβλεψη και ανάπτυξη ομάδας 30 εργαζομένων. Έναρξη λειτουργίας και υποστήριξη οκτώ καταστημάτων franchise. Συμφωνίες χονδρικής διάθεσης σε επτά περιοχές και ανάπτυξη συνεργασιών B2B.",
-          "tags": [
-            "Ηγεσία",
-            "B2B",
-            "Λειτουργίες",
-            "Διαχείριση Ομάδας"
-          ]
-        },
-        {
-          "date": "2015 — 2019",
-          "title": "Υπεύθυνος Καταστήματος",
-          "company": "NOBACCO, Ελλάδα",
-          "desc": "Επίτευξη στόχων πωλήσεων και διασφάλιση ικανοποίησης πελατών. Διαχείριση προγραμματισμού και αξιολόγησης προσωπικού.",
-          "tags": [
-            "Πωλήσεις",
-            "Εξυπηρέτηση Πελατών",
-            "Διαχείριση Προσωπικού"
-          ]
-        },
-        {
-          "date": "2010 — 2012",
-          "title": "Διαχειριστής IT",
-          "company": "Internet Cafe Κ. Αχαΐα, Ελλάδα",
-          "desc": "Συντήρηση και αναβάθμιση συστημάτων hardware/software. Εφαρμογή πρωτοκόλλων ασφάλειας δεδομένων.",
-          "tags": [
-            "IT Υποστήριξη",
-            "Hardware",
-            "Ασφάλεια"
-          ]
-        },
-        {
-          "date": "2004 — 2007",
-          "title": "Εκπρόσωπος Εξυπηρέτησης Πελατών",
-          "company": "ΟΤΕ Α.Ε., Ελλάδα",
-          "desc": "Παροχή υποστήριξης πελατών και προώθηση υπηρεσιών.",
-          "tags": [
-            "Υποστήριξη Πελατών",
-            "Τηλεπικοινωνίες"
-          ]
-        }
-      ]
-    },
-    "skills": {
-      "title": "Δεξιότητες",
-      "groups": [
-        {
-          "title": "Βασικές Ικανότητες",
-          "items": [
-            "Στρατηγική Ηγεσία",
-            "Ανάπτυξη Ομάδων",
-            "Επιχειρηματικός Σχεδιασμός",
-            "Διαχείριση Συνεργασιών",
-            "Βελτιστοποίηση Διαδικασιών"
-          ]
-        },
-        {
-          "title": "Τεχνικές",
-          "items": [
-            "Python",
-            "Java / JavaScript",
-            "SQL",
-            "HTML5 / CSS",
-            "LaTeX"
-          ]
-        },
-        {
-          "title": "Σε Εξέλιξη",
-          "items": [
-            "Professional Scrum Master",
-            "CS50P (Harvard)",
-            "CS50AI (Harvard)",
-            "Oracle Java Foundations"
-          ]
-        },
-        {
-          "title": "Γλώσσες",
-          "items": [
-            "Ελληνικά (Μητρική)",
-            "Αγγλικά (Proficiency)",
-            "Γερμανικά (Mittelstufe)"
-          ]
-        }
-      ]
-    },
-    "education": {
-      "title": "Εκπαίδευση",
-      "items": [
-        {
-          "date": "2019",
-          "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
-          "company": "Πανεπιστήμιο Πατρών, Πολυτεχνική Σχολή",
-          "desc": "Διπλωματική: \"Low Code Development Platforms\""
-        },
-        {
-          "date": "2017 — 2024",
-          "title": "Επαγγελματικά Σεμινάρια",
-          "company": "Διάφοροι Φορείς",
-          "desc": "Εξυπηρέτηση Πελατών (Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών), Στρατηγική Πωλήσεων (NOBACCO/BAT Hellas), Βέλτιστες Πρακτικές Εξυπηρέτησης (NOBACCO)"
-        }
-      ]
-    },
-    "contact": {
-      "title": "Επικοινωνία"
-    }
+    "jobs": [
+      {
+        "co": "NOBACCO",
+        "meta": "2015 — 2025",
+        "roles": [
+          {
+            "date": "2019 — 2025",
+            "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
+            "pts": [
+              "Εποπτεία της λειτουργίας των καταστημάτων της περιοχής: τήρηση διαδικασιών, λειτουργικό κόστος, απόδοση (ROI)",
+              "Διοίκηση ομάδας 30 εργαζομένων — εκπαίδευση, ετήσιες αξιολογήσεις, προσλήψεις",
+              "Έναρξη λειτουργίας οκτώ καταστημάτων franchise και υποστήριξή τους με εκπαίδευση, καθοδήγηση και παρακολούθηση απόδοσης",
+              "Συμφωνίες χονδρικής διάθεσης των προϊόντων NOBACCO με χονδρεμπόρους σε Αχαΐα, Αιτωλοακαρνανία, Αργολίδα, Κορινθία, Λακωνία, Μεσσηνία και Ιόνια Νησιά"
+            ],
+            "scope": [
+              {
+                "h": "Λειτουργία",
+                "items": [
+                  "Διασφάλιση της τήρησης των εταιρικών πολιτικών και διαδικασιών",
+                  "Διαχείριση λειτουργικών δαπανών και ανάλυση απόδοσης (ROI)",
+                  "Συμμετοχή σε εμπορικά και προωθητικά έργα",
+                  "Παρακολούθηση του ανταγωνισμού και των προτιμήσεων των πελατών",
+                  "Χειρισμός παραπόνων πελατών"
+                ]
+              },
+              {
+                "h": "Ανθρώπινο δυναμικό",
+                "items": [
+                  "Εποπτεία 30 εργαζομένων στα καταστήματα NOBACCO",
+                  "Καθοδήγηση, εκπαίδευση και παρακολούθηση οκτώ καταστημάτων franchise",
+                  "Εκπαίδευση στον χώρο εργασίας και εντοπισμός εκπαιδευτικών αναγκών",
+                  "Δημιουργία εκπαιδευτικού υλικού και εργαλείων",
+                  "Ετήσιες αξιολογήσεις προσωπικού",
+                  "Σχεδιασμός και συμμετοχή στις διαδικασίες πρόσληψης"
+                ]
+              },
+              {
+                "h": "Επιχειρηματική ανάπτυξη",
+                "items": [
+                  "Εντοπισμός νέων ευκαιριών συνεργασίας B2B και διαπραγμάτευση συμφωνιών χονδρικής",
+                  "Υποστήριξη και ανάπτυξη των υφιστάμενων συνεργασιών",
+                  "Συνεργασία με τις συνεργαζόμενες επιχειρήσεις για καλύτερη αποδοτικότητα στην αγορά",
+                  "Παρακολούθηση αποτελεσμάτων B2B και καθαρών πωλήσεων λιανικής, με τακτική επικοινωνία με ιδιοκτήτες και υπευθύνους"
+                ]
+              }
+            ]
+          },
+          {
+            "date": "2015 — 2019",
+            "title": "Υπεύθυνος Καταστήματος",
+            "pts": [
+              "Επίτευξη των μηνιαίων, τριμηνιαίων και ετήσιων στόχων του καταστήματος",
+              "Διαχείριση προσωπικού, ωραρίων και αποθήκης",
+              "Τήρηση των προτύπων εξυπηρέτησης και της εταιρικής κουλτούρας· μεταφορά της εταιρικής ενημέρωσης στην ομάδα"
+            ]
+          }
+        ]
+      },
+      {
+        "date": "2010 — 2012",
+        "title": "Διαχειριστής Συστημάτων",
+        "org": "Internet café · Κάτω Αχαΐα",
+        "pts": [
+          "Συντήρηση και αναβάθμιση υπολογιστών, περιφερειακών και τοπικού δικτύου",
+          "Τακτική λήψη αντιγράφων ασφαλείας και προστασία δεδομένων",
+          "Τεχνική υποστήριξη και άμεση επίλυση προβλημάτων"
+        ]
+      },
+      {
+        "date": "2004 — 2007",
+        "title": "Εκπρόσωπος Εξυπηρέτησης Πελατών",
+        "org": "ΟΤΕ Α.Ε.",
+        "pts": [
+          "Διαχείριση αιτημάτων, παραπόνων και κλιμακώσεων πελατών",
+          "Ενημέρωση πελατών για προϊόντα και υπηρεσίες"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "wide": true,
+        "h": "Σε εξέλιξη",
+        "text": "Professional Scrum Master (PSM) · CS50P και CS50AI, Harvard · Oracle Java Foundations"
+      },
+      {
+        "h": "Διοίκηση",
+        "wide": true,
+        "text": "Στρατηγική ηγεσία και ανάπτυξη ομάδων · Επιχειρηματικός σχεδιασμός και διαχείριση συνεργασιών · Αναλυτική επίλυση προβλημάτων και βελτίωση διαδικασιών"
+      },
+      {
+        "h": "Εφαρμοσμένη εμπειρία",
+        "text": "Python",
+        "sub": "Έξι μήνες σε εταιρικό έργο",
+        "mono": true
+      },
+      {
+        "h": "Ακαδημαϊκό επίπεδο",
+        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "mono": true
+      },
+      {
+        "wide": true,
+        "h": "Εργαλεία",
+        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX · Microsoft Office"
+      }
+    ],
+    "edu": [
+      {
+        "date": "2019",
+        "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
+        "org": "Πανεπιστήμιο Πατρών · Πολυτεχνική Σχολή",
+        "note": "Διπλωματική εργασία: «Low Code Development Platforms»"
+      }
+    ],
+    "sem": [
+      {
+        "date": "2017 — 2024",
+        "title": "Εξυπηρέτηση πελατών",
+        "org": "Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών · 2017–2019 και 2022–2024"
+      },
+      {
+        "date": "2018",
+        "title": "Στρατηγική και εξειδικευμένες τεχνικές πωλήσεων",
+        "org": "NOBACCO Α.Ε. / BAT Hellas"
+      },
+      {
+        "date": "2017",
+        "title": "Βέλτιστες πρακτικές εξυπηρέτησης πελατών",
+        "org": "NOBACCO Α.Ε."
+      }
+    ],
+    "languages": [
+      {
+        "lvl": "Μητρική",
+        "name": "Ελληνικά",
+        "cert": ""
+      },
+      {
+        "lvl": "C2",
+        "name": "Αγγλικά",
+        "cert": "Άριστη γνώση · Certificate of Proficiency in English, University of Michigan"
+      },
+      {
+        "lvl": "C1",
+        "name": "Γερμανικά",
+        "cert": "Πολύ καλή γνώση · Zentrale Mittelstufenprüfung, Goethe-Institut"
+      }
+    ]
   }
 }

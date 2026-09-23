@@ -8,17 +8,24 @@ Hosted on GitHub Pages at <https://www.ialexopoulos.org>.
 **All content lives in one file: [`data/cv.json`](data/cv.json).**
 Edit it, commit, push. GitHub Actions rebuilds and deploys within about a minute.
 
-Adding a job means adding one object under `experience.items` — in both the
-`en` and `el` blocks:
+Adding a job means adding one object at the top of `jobs` — in both the `en`
+and `el` blocks. `scope` is optional: it becomes the "Full scope of the role"
+panel on the web page and is left out of the PDF.
 
 ```json
 {
   "date": "2026 — Now",
   "title": "Head of Something",
-  "company": "Company, Greece",
-  "desc": "One or two sentences.",
-  "tags": ["Tag", "Tag"]
+  "org": "Company · Greece",
+  "pts": ["Headline point", "Headline point"],
+  "scope": [{ "h": "Operations", "items": ["Detail", "Detail"] }]
 }
+```
+
+Several roles at one company go in a group, shown under one company line:
+
+```json
+{ "co": "Company", "meta": "Greece · 2015 — 2025", "roles": [ { …role… }, { …role… } ] }
 ```
 
 Everything downstream follows automatically: both web pages, both PDFs, the
@@ -43,7 +50,7 @@ npm run serve                 # build and serve on http://localhost:4321
 |---|---|
 | `/` | Language router — links to both, forwards first-time visitors, `x-default` for search engines |
 | `/en/`, `/el/` | Fully rendered pages, each with its own `<html lang>`, canonical URL and `hreflang` pair |
-| `/cv-en.pdf`, `/cv-el.pdf` | Real A4 PDFs rendered by headless Chromium — identical in every browser |
+| `/cv-en.pdf`, `/cv-el.pdf` | Two-page A4 PDFs from the same data, rendered by headless Chromium; the footer carries the build month |
 | `/og.png` | 1200×630 link preview card for LinkedIn, WhatsApp, Slack |
 | `/sitemap.xml`, `/robots.txt` | Search engine discovery |
 | `/fonts/*.woff2` | Self-hosted fonts — no request ever leaves for a third party |
@@ -51,10 +58,10 @@ npm run serve                 # build and serve on http://localhost:4321
 
 ## Notes on the two things that are easy to get wrong
 
-**Greek glyphs.** Libre Baskerville and Karla have no Greek characters at all.
-Literata and Commissioner are layered behind them in the font stack and scoped
-with `unicode-range`, so Greek text renders in a real typeface and the Greek
-fonts are never downloaded on the English page.
+**Greek glyphs.** Source Serif 4, IBM Plex Sans and JetBrains Mono all have
+native Greek, so both languages use the same three families. Each is split
+into Latin, Latin Extended and Greek files scoped with `unicode-range`, so the
+English page never downloads the Greek files.
 
 **Greek capitals.** Greek drops accents when set in capitals (ΕΜΠΕΙΡΙΑ, not
 ΕΜΠΕΙΡΊΑ). Browsers only apply that rule to `text-transform: uppercase` when
@@ -65,9 +72,8 @@ own page and its own `<html lang>` rather than a JavaScript toggle.
 
 ```
 data/cv.json              all content, both languages
-src/styles.css            the original design, unchanged
-src/additions.css         additions layered on top
-src/app.js                theme, menu, scroll-spy — progressive enhancement only
+src/styles.css            the design; colour tokens on :root, dark mode included
+src/app.js                theme toggle, scroll-spy — progressive enhancement only
 build.mjs                 the generator
 check-links.mjs           post-build validation
 .github/workflows/        build, validate, deploy
