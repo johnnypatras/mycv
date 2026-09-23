@@ -342,6 +342,9 @@ function notFoundPage() {
 /* ------------------------------------------------------- print / PDF page -- */
 function printPage(lang) {
   const d = data[lang], m = d.meta;
+  // Stamped at build time, so the PDF always says which deploy of the site it came from.
+  const month = new Intl.DateTimeFormat(lang === 'el' ? 'el-GR' : 'en-GB', { month: 'long', year: 'numeric' }).format(new Date());
+  const updated = lang === 'el' ? `Ενημέρωση: ${month}` : `Updated ${month}`;
   const row = (it, tags) => `
     <div class="entry">
       <div class="entry-date">${esc(it.date)}</div>
@@ -387,7 +390,7 @@ footer { margin-top:3.2mm; padding-top:1.6mm; border-top:0.6pt solid #E0DAD3;
 <body>
   <h1>${esc(m.name)}</h1>
   <p class="role">${esc(d.hero.role)}</p>
-  <p class="contact"><span>${shared.email}</span><span>${esc(shared.phoneDisplay)}</span><span>linkedin.com/in/ialexop</span><span>github.com/johnnypatras</span><span>${esc(d.ui.location)}</span></p>
+  <p class="contact"><span>${shared.email}</span><span>${esc(shared.phoneDisplay)}</span><span>${esc(shared.linkedin.replace(/^https?:\/\/(www\.)?/, ''))}</span><span>${esc(shared.github.replace(/^https?:\/\/(www\.)?/, ''))}</span><span>${esc(d.ui.location)}</span></p>
 
   <h2>${esc(d.nav.about)}</h2>
   <p class="summary">${esc(d.hero.summary)}</p>
@@ -403,7 +406,7 @@ footer { margin-top:3.2mm; padding-top:1.6mm; border-top:0.6pt solid #E0DAD3;
     ${d.skills.groups.map((g) => `<div class="grp"><h3>${esc(g.title)}</h3><p>${g.items.map(esc).join(' · ')}</p></div>`).join('')}
   </div>
 
-  <footer><span>${esc(m.name)}</span><span>${site.origin.replace('https://', '')}/${lang}/</span></footer>
+  <footer><span>${esc(m.name)}</span><span>${site.origin.replace('https://', '')}/${lang}/ · ${esc(updated)}</span></footer>
 </body>
 </html>
 `;
