@@ -20,6 +20,13 @@
 \usepackage{qrcode}
 \usepackage{tikz}
 \usepackage{needspace}
+\usepackage{accsupp}
+% For applicant tracking systems: no hyphenation (a split word is a lost
+% keyword), and plain dashes as list bullets, which extract as normal text.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\renewcommand{\labelitemi}{{\color{black!40}\textendash}}
 % Never leave a section heading alone at the foot of a page.
 \let\cvsectionplain\section
 \renewcommand*{\section}[1]{\needspace{5\baselineskip}\cvsectionplain{#1}}
@@ -41,12 +48,12 @@
   \@initializebox{\makecvheaddetailsbox}%
   \savebox{\makecvheaddetailsbox}{{\small\upshape\renewcommand{\arraystretch}{1.3}%
     \begin{tabular}[b]{@{}l@{\hspace{0.65em}}>{\color{black!80}}l@{}}
-      \makebox[1.1em][c]{\color{black!45}\faIcon{location-dot}} & Πάτρα, Αχαΐα, Ελλάδα\\
-      \makebox[1.1em][c]{\color{black!45}\faIcon{mobile-screen}} & \href{tel:+306978036458}{+30 697 803 6458}\\
-      \makebox[1.1em][c]{\color{black!45}\faIcon[regular]{envelope}} & \href{mailto:contact@ialexopoulos.org}{contact@\mbox{ialexopoulos.org}}\\
-      \makebox[1.1em][c]{\color{black!45}\faIcon{earth-europe}} & \href{https://www.ialexopoulos.org/el/}{\mbox{ialexopoulos.org}}\\
-      \makebox[1.1em][c]{\color{black!45}\faIcon{linkedin-in}} & \href{https://linkedin.com/in/ialexop}{\mbox{linkedin.com/in/ialexop}}\\
-      \makebox[1.1em][c]{\color{black!45}\faIcon{github}} & \href{https://github.com/johnnypatras}{\mbox{github.com/johnnypatras}}\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={Τοποθεσία: }}\makebox[1.1em][c]{\color{black!45}\faIcon{location-dot}}\EndAccSupp{} & Πάτρα, Αχαΐα, Ελλάδα\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={Τηλέφωνο: }}\makebox[1.1em][c]{\color{black!45}\faIcon{mobile-screen}}\EndAccSupp{} & \href{tel:+306978036458}{+30 697 803 6458}\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={Email: }}\makebox[1.1em][c]{\color{black!45}\faIcon[regular]{envelope}}\EndAccSupp{} & \href{mailto:contact@ialexopoulos.org}{contact@\mbox{ialexopoulos.org}}\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={Ιστότοπος: }}\makebox[1.1em][c]{\color{black!45}\faIcon{earth-europe}}\EndAccSupp{} & \href{https://www.ialexopoulos.org/el/}{\mbox{ialexopoulos.org}}\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={LinkedIn: }}\makebox[1.1em][c]{\color{black!45}\faIcon{linkedin-in}}\EndAccSupp{} & \href{https://linkedin.com/in/ialexop}{\mbox{linkedin.com/in/ialexop}}\\
+      \BeginAccSupp{method=pdfstringdef,ActualText={GitHub: }}\makebox[1.1em][c]{\color{black!45}\faIcon{github}}\EndAccSupp{} & \href{https://github.com/johnnypatras}{\mbox{github.com/johnnypatras}}\\
     \end{tabular}}}%
   \@initializelength{\makecvheaddetailswidth}%
   \settowidth{\makecvheaddetailswidth}{\usebox{\makecvheaddetailsbox}}%

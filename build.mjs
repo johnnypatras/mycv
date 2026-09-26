@@ -79,6 +79,19 @@ const FONT_CSS = [
     `src:url('../fonts/${short}-${sub}.woff2') format('woff2-variations');unicode-range:${range};}`))
 ].join('\n');
 
+/* The PDFs use static (single-weight) font files: Chromium embeds variable
+ * fonts as Type 3 fonts, which some applicant tracking systems read poorly.
+ * Static files embed as ordinary TrueType fonts. */
+const PRINT_FAMILIES = [
+  ['Source Serif 4', 'source-serif-4', [400, 600]],
+  ['IBM Plex Sans', 'ibm-plex-sans', [400, 500, 600]],
+  ['JetBrains Mono', 'jetbrains-mono', [400]]
+];
+const PRINT_FONT_CSS = PRINT_FAMILIES.flatMap(([family, stem, weights]) => weights.flatMap((w) =>
+  SUBSETS.map(([sub, range]) =>
+    `@font-face{font-family:'${family}';font-style:normal;font-weight:${w};` +
+    `src:url('file://${join(ROOT, 'node_modules', '@fontsource', stem, 'files', `${stem}-${sub}-${w}-normal.woff2`)}') format('woff2');unicode-range:${range};}`))).join('\n');
+
 /* ----------------------------------------------------------------- page -- */
 const urlFor = (lang) => `${site.origin}/${lang}/`;
 const SECTIONS = ['about', 'experience', 'skills', 'education'];
@@ -340,16 +353,18 @@ function notFoundPage() {
 function printPage(lang) {
   const d = data[lang], m = d.meta;
 
+  /* Date ranges as "2019–2025": the compact form every CV parser reads. */
+  const pd = (s) => esc(s).replace(/ — /g, '–');
   const entry = (date, title, org, bullets, note) => `
     <div class="entry">
-      <div class="date">${esc(date)}</div>
+      <div class="date">${pd(date)}</div>
       <div><h3>${esc(title)}</h3>${org ? `<p class="org">${esc(org)}</p>` : ''}${note ? `<p class="note">${esc(note)}</p>` : ''}${bullets ? `<ul>${bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}</div>
     </div>`;
   const line = (date, title, org) => `
-    <div class="line"><span class="date">${esc(date)}</span><span><b>${esc(title)}</b>${org ? ` <span class="org">· ${esc(org)}</span>` : ''}</span></div>`;
+    <div class="line"><span class="date">${pd(date)}</span><span><b>${esc(title)}</b>${org ? ` <span class="org">· ${esc(org)}</span>` : ''}</span></div>`;
 
   const jobs = d.jobs.map((j) => j.roles
-    ? `<div class="group"><p class="co"><strong>${esc(j.co)}</strong> · ${esc(j.meta)}</p>${j.roles.map((r) => entry(r.date, r.title, '', r.pts)).join('')}</div>`
+    ? `<div class="group"><p class="co"><strong>${esc(j.co)}</strong> · ${pd(j.meta)}</p>${j.roles.map((r) => entry(r.date, r.title, '', r.pts)).join('')}</div>`
     : entry(j.date, j.title, j.org, j.pts)).join('');
 
   return `<!DOCTYPE html>
@@ -358,7 +373,7 @@ function printPage(lang) {
 <meta charset="UTF-8">
 <title>${esc(m.name)} — CV</title>
 <style>
-${FONT_CSS.replace(/\.\.\/fonts\//g, 'fonts/')}
+${PRINT_FONT_CSS}
 /* Two A4 pages. Each section moves to the next page whole rather than
    splitting, so the break always falls between sections. */
 @page { size: A4; margin: 14mm 16mm 15mm; }
@@ -379,16 +394,22 @@ h2 { font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:13.5
 h3 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10.8pt; line-height:1.3; color:#1A1A18; }
 .org, .note { font-size:8.6pt; color:#6B6860; margin-top:.4mm; }
 ul { list-style:none; margin-top:1.3mm; }
-li { position:relative; padding-left:4mm; margin-top:.7mm; }
-li::before { content:''; position:absolute; left:.3mm; top:.74em; width:2mm; border-top:.6pt solid #9A968C; }
+/* No CSS positioning anywhere on this page: positioned elements are drawn
+   after everything else, which scrambles the reading order a parser sees. */
+li { padding-left:4mm; margin-top:.7mm; }
+li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; vertical-align:.3em; border-top:.6pt solid #9A968C; }
 .group { margin-top:3.4mm; }
 .co { margin-left:30mm; font-size:8.6pt; color:#6B6860; }
 .co strong { color:#1A1A18; font-weight:600; letter-spacing:.02em; }
 .group .entry:first-of-type { margin-top:1.6mm; }
-/* Roles at the same company: a hairline in the date column joins each date to the next. */
-.group .entry { position:relative; }
-.group .entry:not(:last-of-type)::after { content:''; position:absolute; left:.7mm; top:5mm; bottom:-3mm;
-  border-left:.6pt solid #CFCAC0; }
+/* Roles at the same company: a hairline in the date column joins each date to
+   the next, drawn as background segments (no positioning, see above). */
+.group .entry + .entry { margin-top:0; padding-top:3.4mm; }
+.group .entry:not(:last-of-type) { background:linear-gradient(#CFCAC0,#CFCAC0) no-repeat .7mm 5mm / .6pt calc(100% - 5mm); }
+.group .entry + .entry { background:linear-gradient(#CFCAC0,#CFCAC0) no-repeat .7mm 0 / .6pt 3.1mm; }
+.group .entry + .entry:not(:last-of-type) { background:
+  linear-gradient(#CFCAC0,#CFCAC0) no-repeat .7mm 0 / .6pt 3.1mm,
+  linear-gradient(#CFCAC0,#CFCAC0) no-repeat .7mm 8.4mm / .6pt calc(100% - 8.4mm); }
 .skills { display:grid; grid-template-columns:1fr 1fr; gap:3.4mm 9mm; margin:3.4mm 0 0 30mm; }
 .skills .wide { grid-column:1 / -1; }
 .lbl { font-family:'JetBrains Mono',monospace; font-size:7.2pt; letter-spacing:.14em; text-transform:uppercase; color:#747066; }

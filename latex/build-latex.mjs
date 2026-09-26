@@ -24,6 +24,11 @@ const LABELS = {
   en: { summary: 'Professional Summary', country: 'Greece', title: 'Curriculum Vitae' },
   el: { summary: 'Επαγγελματικό προφίλ', country: 'Ελλάδα', title: 'Βιογραφικό σημείωμα' }
 };
+/* What an applicant tracking system reads in place of each contact icon. */
+const ICON_TEXT = {
+  en: ['Location', 'Phone', 'Email', 'Website', 'LinkedIn', 'GitHub'],
+  el: ['Τοποθεσία', 'Τηλέφωνο', 'Email', 'Ιστότοπος', 'LinkedIn', 'GitHub']
+};
 
 const tex = (s) => String(s)
   .replace(/\\/g, '\\textbackslash{}')
@@ -74,7 +79,7 @@ function document(lang) {
     ['\\faIcon{earth-europe}', `\\href{${url}}{${tex(bare(site.origin))}}`],
     ['\\faIcon{linkedin-in}', `\\href{${shared.linkedin}}{${tex(bare(shared.linkedin))}}`],
     ['\\faIcon{github}', `\\href{${shared.github}}{${tex(bare(shared.github))}}`]
-  ].map(([icon, text]) => `      \\makebox[1.1em][c]{\\color{black!45}${icon}} & ${text}\\\\`).join('\n');
+  ].map(([icon, text], i) => `      \\BeginAccSupp{method=pdfstringdef,ActualText={${ICON_TEXT[lang][i]}: }}\\makebox[1.1em][c]{\\color{black!45}${icon}}\\EndAccSupp{} & ${text}\\\\`).join('\n');
 
   const langSetup = lang === 'el'
     ? `\\usepackage{polyglossia}
@@ -103,6 +108,13 @@ ${langSetup}
 \\usepackage{qrcode}
 \\usepackage{tikz}
 \\usepackage{needspace}
+\\usepackage{accsupp}
+% For applicant tracking systems: no hyphenation (a split word is a lost
+% keyword), and plain dashes as list bullets, which extract as normal text.
+\\hyphenpenalty=10000
+\\exhyphenpenalty=10000
+\\emergencystretch=2em
+\\renewcommand{\\labelitemi}{{\\color{black!40}\\textendash}}
 % Never leave a section heading alone at the foot of a page.
 \\let\\cvsectionplain\\section
 \\renewcommand*{\\section}[1]{\\needspace{5\\baselineskip}\\cvsectionplain{#1}}
