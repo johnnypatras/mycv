@@ -4,3 +4,7 @@ dist/
 *.log
 .shots/
 shot.tmp.mjs
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.pdf

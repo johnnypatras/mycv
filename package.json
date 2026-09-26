@@ -8,7 +8,8 @@
     "build": "node build.mjs",
     "build:fast": "node build.mjs --no-pdf",
     "check": "node check-links.mjs",
-    "serve": "node build.mjs --no-pdf && npx --yes serve dist -l 4321"
+    "serve": "node build.mjs --no-pdf && npx --yes serve dist -l 4321",
+    "latex": "node latex/build-latex.mjs"
   },
   "devDependencies": {
     "@fontsource-variable/ibm-plex-sans": "^5.3.0",

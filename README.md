@@ -44,6 +44,14 @@ npm run check                 # validate links, anchors and meta tags
 npm run serve                 # build and serve on http://localhost:4321
 ```
 
+## LaTeX versions
+
+`npm run latex` writes `latex/cv-en.tex` and `latex/cv-el.tex` from the same
+`data/cv.json` — classic moderncv, as in the original CVs — and compiles them
+with XeLaTeX when it is installed (MacTeX here). The `.tex` files are committed,
+so they also open on Overleaf (set the compiler to XeLaTeX). The compiled PDFs
+stay local and are not part of the website build.
+
 ## What gets built
 
 | Output | Purpose |
@@ -76,5 +84,6 @@ src/styles.css            the design; colour tokens on :root, dark mode included
 src/app.js                theme toggle, scroll-spy — progressive enhancement only
 build.mjs                 the generator
 check-links.mjs           post-build validation
+latex/                    moderncv CVs generated from cv.json
 .github/workflows/        build, validate, deploy
 ```
