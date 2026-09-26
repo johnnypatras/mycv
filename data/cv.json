@@ -142,6 +142,12 @@
         "text": "Professional Scrum Master (PSM) · CS50P and CS50AI, Harvard · Oracle Java Foundations"
       },
       {
+        "wide": true,
+        "h": "AI tools",
+        "text": "AI coding agents (Claude Code, OpenCode, Pi) with frontier and locally run open-weight models (LM Studio, Qwen) · LiteLLM",
+        "sub": "Since October 2025 · used to build ialexopoulos.org"
+      },
+      {
         "h": "Management",
         "wide": true,
         "text": "Strategic leadership and team development · Business planning and partnership management · Analytical problem-solving and process optimisation"
@@ -160,7 +166,7 @@
       {
         "wide": true,
         "h": "Tools",
-        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX · Microsoft Office"
+        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
       }
     ],
     "edu": [
@@ -327,6 +333,12 @@
         "text": "Professional Scrum Master (PSM) · CS50P και CS50AI, Harvard · Oracle Java Foundations"
       },
       {
+        "wide": true,
+        "h": "Τεχνητή νοημοσύνη",
+        "text": "Εργαλεία προγραμματισμού με τεχνητή νοημοσύνη (Claude Code, OpenCode, Pi), με μοντέλα αιχμής και μοντέλα ανοιχτών βαρών σε τοπική εκτέλεση (LM Studio, Qwen) · LiteLLM",
+        "sub": "Από τον Οκτώβριο του 2025 · με αυτά αναπτύχθηκε το ialexopoulos.org"
+      },
+      {
         "h": "Διοίκηση",
         "wide": true,
         "text": "Στρατηγική ηγεσία και ανάπτυξη ομάδων · Επιχειρηματικός σχεδιασμός και διαχείριση συνεργασιών · Αναλυτική επίλυση προβλημάτων και βελτίωση διαδικασιών"
@@ -345,7 +357,7 @@
       {
         "wide": true,
         "h": "Εργαλεία",
-        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX · Microsoft Office"
+        "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
       }
     ],
     "edu": [

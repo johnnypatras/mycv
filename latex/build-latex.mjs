@@ -30,7 +30,10 @@ const tex = (s) => String(s)
   .replace(/([&%$#_{}])/g, '\\$1')
   .replace(/~/g, '\\textasciitilde{}')
   .replace(/\^/g, '\\textasciicircum{}')
-  .replace(/ · /g, ' \\textperiodcentered{} ');
+  // separator dots stay with the word before them, never starting a line
+  .replace(/ · /g, '~\\textperiodcentered{} ')
+  // web addresses are never hyphenated across lines
+  .replace(/\b([a-z0-9-]+\.(?:org|com|gr|net)(?:\/[^\s)]*)?)/g, '\\mbox{$1}');
 /* Date ranges ("2019 — 2025") take an en dash without spaces: 2019–2025.
  * The character itself, not "--": Greek fonts under polyglossia skip TeX ligatures. */
 const dates = (s) => tex(s).replace(/ — /g, '–');
