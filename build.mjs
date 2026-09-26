@@ -385,6 +385,10 @@ li::before { content:''; position:absolute; left:.3mm; top:.74em; width:2mm; bor
 .co { margin-left:30mm; font-size:8.6pt; color:#6B6860; }
 .co strong { color:#1A1A18; font-weight:600; letter-spacing:.02em; }
 .group .entry:first-of-type { margin-top:1.6mm; }
+/* Roles at the same company: a hairline in the date column joins each date to the next. */
+.group .entry { position:relative; }
+.group .entry:not(:last-of-type)::after { content:''; position:absolute; left:.7mm; top:5mm; bottom:-3mm;
+  border-left:.6pt solid #CFCAC0; }
 .skills { display:grid; grid-template-columns:1fr 1fr; gap:3.4mm 9mm; margin:3.4mm 0 0 30mm; }
 .skills .wide { grid-column:1 / -1; }
 .lbl { font-family:'JetBrains Mono',monospace; font-size:7.2pt; letter-spacing:.14em; text-transform:uppercase; color:#747066; }
