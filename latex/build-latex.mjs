@@ -89,7 +89,7 @@ function document(lang) {
 \\documentclass[10pt,a4paper,sans]{moderncv}
 \\moderncvstyle{classic}
 \\moderncvcolor{black}
-\\usepackage[scale=0.8]{geometry}
+\\usepackage[scale={0.8,0.87}]{geometry}  % a little less top/bottom margin, so sections fit where they belong
 \\usepackage{fontspec}
 \\setsansfont{${PLEX}
 \\setmainfont{${PLEX}
