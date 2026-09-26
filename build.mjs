@@ -391,7 +391,7 @@ h2 { font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:13.5
      border-bottom:.6pt solid #E2DFD6; padding-bottom:1.2mm; margin:6.5mm 0 1mm; break-after:avoid; }
 .entry { display:grid; grid-template-columns:25mm 1fr; column-gap:5mm; margin-top:3.4mm; break-inside:avoid; }
 .date { font-family:'JetBrains Mono',monospace; font-size:8pt; color:#6B6860; padding-top:.9mm; white-space:nowrap; }
-h3 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10.8pt; line-height:1.3; color:#1A1A18; }
+h3 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10.8pt; line-height:1.3; color:#1A1A18; word-spacing:.04em; }
 .org, .note { font-size:8.6pt; color:#6B6860; margin-top:.4mm; }
 ul { list-style:none; margin-top:1.3mm; }
 /* No CSS positioning anywhere on this page: positioned elements are drawn
@@ -412,13 +412,15 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
   linear-gradient(#CFCAC0,#CFCAC0) no-repeat .7mm 8.4mm / .6pt calc(100% - 8.4mm); }
 .skills { display:grid; grid-template-columns:1fr 1fr; gap:3.4mm 9mm; margin:3.4mm 0 0 30mm; }
 .skills .wide { grid-column:1 / -1; }
-.lbl { font-family:'JetBrains Mono',monospace; font-size:7.2pt; letter-spacing:.14em; text-transform:uppercase; color:#747066; }
+/* Labels in normal case with no letter-spacing: spaced capitals extract as
+   single letters ("I N P R O G R E S S") in some CV parsers. */
+.lbl { font-family:'JetBrains Mono',monospace; font-size:7.8pt; color:#747066; }
 .skills p { margin-top:.8mm; }
 .skills .code { font-family:'JetBrains Mono',monospace; font-size:8.3pt; line-height:1.6; }
 .skills .sub { display:block; font-family:'IBM Plex Sans',sans-serif; font-size:8.4pt; color:#6B6860; }
 .line { display:grid; grid-template-columns:25mm 1fr; column-gap:5mm; margin-top:2.2mm; }
 .line .date { padding-top:.3mm; }
-.line b { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10pt; color:#1A1A18; }
+.line b { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10pt; color:#1A1A18; word-spacing:.04em; }
 .line .org { display:inline; margin:0; }
 .online { margin-top:9mm; display:flex; align-items:center; gap:4mm; break-inside:avoid; }
 .online svg { flex-shrink:0; margin-left:29mm; }
