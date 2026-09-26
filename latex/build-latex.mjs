@@ -41,6 +41,7 @@ const lowerFirst = (s) => s.charAt(0).toLocaleLowerCase() + s.slice(1);
 function document(lang) {
   const d = data[lang], L = LABELS[lang];
   const [first, ...rest] = d.meta.name.split(' ');
+  const url = `${data.site.origin}/${lang}/`;
 
   const jobs = d.jobs.map((j) => j.roles
     ? `  \\cvitem{}{\\textbf{${tex(j.co)}} \\textperiodcentered{} ${dates(j.meta)}}\n` +
@@ -55,7 +56,8 @@ function document(lang) {
 \\setmainlanguage{greek}
 \\setotherlanguage{english}
 \\newfontfamily\\greekfont{cmunrm.otf}[BoldFont=cmunbx.otf, ItalicFont=cmunti.otf, BoldItalicFont=cmunbi.otf]
-\\newfontfamily\\greekfontsf{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]`
+\\newfontfamily\\greekfontsf{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]
+\\newfontfamily\\greekfonttt{cmuntt.otf}`
     : `\\usepackage{polyglossia}
 \\setmainlanguage[variant=british]{english}`;
 
@@ -69,7 +71,9 @@ function document(lang) {
 % CMU fonts are loaded by file name: XeLaTeX on macOS does not find TeX-tree fonts by family name.
 \\setsansfont{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]
 \\setmainfont{cmunrm.otf}[BoldFont=cmunbx.otf, ItalicFont=cmunti.otf, BoldItalicFont=cmunbi.otf]
+\\setmonofont{cmuntt.otf}
 ${langSetup}
+\\usepackage{qrcode}
 \\setlength{\\hintscolumnwidth}{3.1cm}
 ${lang === 'el' ? '% The Greek headline is longer: one size down keeps its first line on one line.\n\\renewcommand*{\\titlefont}{\\Large\\mdseries\\slshape}\n' : ''}
 \\name{${tex(first)}}{${tex(rest.join(' '))}}
@@ -103,6 +107,10 @@ ${d.sem.map((s) => `  \\cvitem{${dates(s.date)}}{${tex(s.title)} – ${tex(s.org
 
 \\section{${tex(d.h.lang)}}
 ${d.languages.map((g) => `  \\cvitem{${tex(g.name)}}{${tex(g.lvl)}${g.cert ? ` \\textperiodcentered{} ${tex(g.cert)}` : ''}}`).join('\n')}
+
+% QR code to the matching language page of the website, for printed copies.
+\\bigskip
+\\cvitem{\\qrcode[height=1.9cm]{${url}}}{\\parbox[b][1.9cm][c]{\\linewidth}{\\small ${tex(d.ui.online)}\\\\\\href{${url}}{\\texttt{${tex(url.replace(/^https:\/\/(www\.)?/, ''))}}}}}
 
 \\end{document}
 `;

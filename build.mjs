@@ -30,6 +30,19 @@ const esc = (s) => String(s)
 const list = (s) => esc(s).replace(/ · /g, '&nbsp;· ');
 const bare = (url) => url.replace(/^https?:\/\/(www\.)?/, '');
 
+/* QR code as inline SVG (vector, so it prints sharp). Filled in by
+ * renderBinaries(), which loads the qrcode package only when PDFs are built. */
+let QR = null;
+function qrSvg(text, sizeMm) {
+  const { modules } = QR.create(text, { errorCorrectionLevel: 'M' });
+  const n = modules.size, q = 2;             // 2-module quiet zone
+  let path = '';
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+    if (modules.get(y, x)) path += `M${x + q} ${y + q}h1v1h-1z`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${n + 2 * q} ${n + 2 * q}" width="${sizeMm}mm" height="${sizeMm}mm" shape-rendering="crispEdges" role="img" aria-label="${text}"><path d="${path}" fill="#1A1A18"/></svg>`;
+}
+
 const out = (rel, content) => {
   const p = join(DIST, rel);
   mkdirSync(dirname(p), { recursive: true });
@@ -382,6 +395,10 @@ li::before { content:''; position:absolute; left:.3mm; top:.74em; width:2mm; bor
 .line .date { padding-top:.3mm; }
 .line b { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10pt; color:#1A1A18; }
 .line .org { display:inline; margin:0; }
+.online { margin-top:9mm; display:flex; align-items:center; gap:4mm; break-inside:avoid; }
+.online svg { flex-shrink:0; margin-left:29mm; }
+.online p { font-size:8.6pt; color:#6B6860; line-height:1.5; }
+.online b { display:block; font-family:'JetBrains Mono',monospace; font-weight:400; font-size:8.6pt; color:#1A1A18; }
 </style>
 </head>
 <body>
@@ -408,6 +425,8 @@ li::before { content:''; position:absolute; left:.3mm; top:.74em; width:2mm; bor
 
   <section><h2>${esc(d.h.lang)}</h2>
   ${d.languages.map((g) => line(g.lvl, g.name, g.cert)).join('')}</section>
+
+  <div class="online">${qrSvg(urlFor(lang), 20)}<p>${esc(d.ui.online)}<b>${bare(urlFor(lang))}</b></p></div>
 </body>
 </html>
 `;
@@ -509,6 +528,7 @@ async function renderBinaries() {
     console.log('  – playwright not installed, skipping PDF/OG (run: npm i -D playwright)');
     return false;
   }
+  ({ default: QR } = await import('qrcode'));
   // CHROMIUM_PATH lets a machine with its own Chromium skip `playwright install`.
   const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
   const ctx = await browser.newContext();

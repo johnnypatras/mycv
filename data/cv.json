@@ -44,7 +44,8 @@
       "dark": "Dark",
       "light": "Light",
       "skip": "Skip to content",
-      "menu": "Sections"
+      "menu": "Sections",
+      "online": "Online version, with the full scope of each role"
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
@@ -228,7 +229,8 @@
       "dark": "Σκοτεινό",
       "light": "Φωτεινό",
       "skip": "Μετάβαση στο περιεχόμενο",
-      "menu": "Ενότητες"
+      "menu": "Ενότητες",
+      "online": "Ηλεκτρονική έκδοση, με αναλυτικά τις αρμοδιότητες"
     },
     "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
     "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",

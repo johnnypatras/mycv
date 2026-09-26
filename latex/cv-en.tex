@@ -8,8 +8,10 @@
 % CMU fonts are loaded by file name: XeLaTeX on macOS does not find TeX-tree fonts by family name.
 \setsansfont{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]
 \setmainfont{cmunrm.otf}[BoldFont=cmunbx.otf, ItalicFont=cmunti.otf, BoldItalicFont=cmunbi.otf]
+\setmonofont{cmuntt.otf}
 \usepackage{polyglossia}
 \setmainlanguage[variant=british]{english}
+\usepackage{qrcode}
 \setlength{\hintscolumnwidth}{3.1cm}
 
 \name{Ioannis}{Alexopoulos}
@@ -75,5 +77,9 @@ More than 15 years of experience leading teams, optimising operations and drivin
   \cvitem{Greek}{Native}
   \cvitem{English}{C2 \textperiodcentered{} Certificate of Proficiency in English \textperiodcentered{} University of Michigan}
   \cvitem{German}{C1 \textperiodcentered{} Zentrale Mittelstufenprüfung \textperiodcentered{} Goethe-Institut}
+
+% QR code to the matching language page of the website, for printed copies.
+\bigskip
+\cvitem{\qrcode[height=1.9cm]{https://www.ialexopoulos.org/en/}}{\parbox[b][1.9cm][c]{\linewidth}{\small Online version, with the full scope of each role\\\href{https://www.ialexopoulos.org/en/}{\texttt{ialexopoulos.org/en/}}}}
 
 \end{document}

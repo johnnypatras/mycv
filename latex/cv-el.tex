@@ -8,11 +8,14 @@
 % CMU fonts are loaded by file name: XeLaTeX on macOS does not find TeX-tree fonts by family name.
 \setsansfont{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]
 \setmainfont{cmunrm.otf}[BoldFont=cmunbx.otf, ItalicFont=cmunti.otf, BoldItalicFont=cmunbi.otf]
+\setmonofont{cmuntt.otf}
 \usepackage{polyglossia}
 \setmainlanguage{greek}
 \setotherlanguage{english}
 \newfontfamily\greekfont{cmunrm.otf}[BoldFont=cmunbx.otf, ItalicFont=cmunti.otf, BoldItalicFont=cmunbi.otf]
 \newfontfamily\greekfontsf{cmunss.otf}[BoldFont=cmunsx.otf, ItalicFont=cmunsi.otf, BoldItalicFont=cmunso.otf]
+\newfontfamily\greekfonttt{cmuntt.otf}
+\usepackage{qrcode}
 \setlength{\hintscolumnwidth}{3.1cm}
 % The Greek headline is longer: one size down keeps its first line on one line.
 \renewcommand*{\titlefont}{\Large\mdseries\slshape}
@@ -80,5 +83,9 @@
   \cvitem{Ελληνικά}{Μητρική}
   \cvitem{Αγγλικά}{C2 \textperiodcentered{} Άριστη γνώση \textperiodcentered{} Certificate of Proficiency in English, University of Michigan}
   \cvitem{Γερμανικά}{C1 \textperiodcentered{} Πολύ καλή γνώση \textperiodcentered{} Zentrale Mittelstufenprüfung, Goethe-Institut}
+
+% QR code to the matching language page of the website, for printed copies.
+\bigskip
+\cvitem{\qrcode[height=1.9cm]{https://www.ialexopoulos.org/el/}}{\parbox[b][1.9cm][c]{\linewidth}{\small Ηλεκτρονική έκδοση, με αναλυτικά τις αρμοδιότητες\\\href{https://www.ialexopoulos.org/el/}{\texttt{ialexopoulos.org/el/}}}}
 
 \end{document}
