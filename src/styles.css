@@ -63,6 +63,7 @@ h1{font-family:var(--serif);font-weight:var(--h1w);font-size:clamp(34px,5.4vw,52
   letter-spacing:var(--h1t);margin:0;text-wrap:balance}
 .role{font-size:clamp(15px,1.7vw,17px);font-weight:500;color:var(--accent);margin:14px 0 0;letter-spacing:-.004em;line-height:1.5;text-wrap:balance}
 .role .at{color:var(--muted);font-weight:400;white-space:nowrap}
+@media (max-width:760px){.role .at{display:block}.role .at .sep{display:none}}
 .intro{margin:20px 0 0;max-width:var(--measure);font-size:16px;line-height:1.72;color:var(--body)}
 
 /* Card spans the full column so its right edge meets the rules, nav and footer.
@@ -126,7 +127,6 @@ details.more summary:hover{color:var(--ink)}
 .grp p.code{font-family:var(--mono);font-size:13px;line-height:1.95}
 .grp .sub{display:block;margin-top:3px;font-family:var(--sans);font-size:13.5px;line-height:1.6;color:var(--muted)}
 
-.lang .rail .yr{color:var(--accent)}
 footer{margin-top:clamp(64px,9vw,96px);border-top:1px solid var(--rule);padding:22px 0 44px;
   display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
 footer span{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}

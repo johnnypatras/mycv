@@ -14,7 +14,7 @@ panel on the web page and is left out of the PDF.
 
 ```json
 {
-  "date": "2026 — Now",
+  "date": "2026–Now",
   "title": "Head of Something",
   "org": "Company · Greece",
   "pts": ["Headline point", "Headline point"],
@@ -25,7 +25,7 @@ panel on the web page and is left out of the PDF.
 Several roles at one company go in a group, shown under one company line:
 
 ```json
-{ "co": "Company", "meta": "Greece · 2015 — 2025", "roles": [ { …role… }, { …role… } ] }
+{ "co": "Company", "meta": "Greece · 2015–2025", "roles": [ { …role… }, { …role… } ] }
 ```
 
 Everything downstream follows automatically: both web pages, both PDFs, the

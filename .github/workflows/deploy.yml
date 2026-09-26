@@ -31,6 +31,9 @@ jobs:
       - name: Install Chromium (for PDF and preview image)
         run: npx playwright install --with-deps chromium
 
+      - name: Install IBM Plex (the PDF footer only sees system fonts)
+        run: sudo apt-get install -y --no-install-recommends fonts-ibm-plex
+
       - name: Build
         run: npm run build
 

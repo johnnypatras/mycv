@@ -21,8 +21,8 @@ const { site, shared } = data;
 
 /* Words the site doesn't need but a paper CV does. */
 const LABELS = {
-  en: { summary: 'Professional Summary', country: 'Greece', title: 'Curriculum Vitae' },
-  el: { summary: 'Επαγγελματικό προφίλ', country: 'Ελλάδα', title: 'Βιογραφικό σημείωμα' }
+  en: { summary: 'Professional Summary', title: 'Curriculum Vitae' },
+  el: { summary: 'Επαγγελματικό προφίλ', title: 'Βιογραφικό σημείωμα' }
 };
 /* What an applicant tracking system reads in place of each contact icon. */
 const ICON_TEXT = {
@@ -73,7 +73,7 @@ function document(lang) {
   /* Contact block: icons in their own fixed-width column, text left-aligned
    * beside them, the whole block set flush right. */
   const contact = [
-    ['\\faIcon{location-dot}', `${tex(d.ui.place)}, ${tex(L.country)}`],
+    ['\\faIcon{location-dot}', `${tex(d.ui.place)}, ${tex(d.ui.country)}`],
     ['\\faIcon{mobile-screen}', `\\href{tel:${shared.phoneHref}}{${tex(shared.phoneDisplay)}}`],
     ['\\faIcon[regular]{envelope}', `\\href{mailto:${shared.email}}{${tex(shared.email)}}`],
     ['\\faIcon{earth-europe}', `\\href{${url}}{${tex(bare(site.origin))}}`],
@@ -107,17 +107,24 @@ ${langSetup}
 \\usepackage{array}
 \\usepackage{qrcode}
 \\usepackage{tikz}
-\\usepackage{needspace}
 \\usepackage{accsupp}
+\\usepackage{ragged2e}
 % For applicant tracking systems: no hyphenation (a split word is a lost
 % keyword), and plain dashes as list bullets, which extract as normal text.
 \\hyphenpenalty=10000
 \\exhyphenpenalty=10000
 \\emergencystretch=2em
+% Without hyphenation, justified lines open wide gaps between words; text is
+% set ragged right instead, in every column moderncv builds.
+\\makeatletter
+\\g@addto@macro\\@arrayparboxrestore{\\RaggedRight}
+\\makeatother
+\\RaggedRight
 \\renewcommand{\\labelitemi}{{\\color{black!40}\\textendash}}
-% Never leave a section heading alone at the foot of a page.
+% Never leave a section heading alone at the foot of a page. (Not needspace:
+% its break penalty would pull whole sections over when they could split.)
 \\let\\cvsectionplain\\section
-\\renewcommand*{\\section}[1]{\\needspace{5\\baselineskip}\\cvsectionplain{#1}}
+\\renewcommand*{\\section}[1]{\\par\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax<5\\baselineskip\\newpage\\fi\\cvsectionplain{#1}}
 \\setlength{\\hintscolumnwidth}{3.1cm}
 \\renewcommand*{\\firstnamestyle}[1]{{\\fontsize{32}{36}\\plexlight\\textcolor{firstnamecolor}{#1}}}
 \\renewcommand*{\\lastnamestyle}[1]{{\\fontsize{32}{36}\\mdseries\\textcolor{lastnamecolor}{#1}}}
@@ -148,7 +155,7 @@ ${contact}
       \\ifthenelse{\\equal{\\@title}{}}{}{\\\\[1em]\\titlestyle{\\@title}}%
     \\end{minipage}}%
   \\usebox{\\makecvheadnamebox}\\hfill\\usebox{\\makecvheaddetailsbox}%
-  \\par\\vspace{2.5em}}
+  \\par\\vspace{1.8em}}
 \\makeatother
 
 \\name{${tex(first)}}{${tex(rest.join(' '))}}
@@ -172,7 +179,7 @@ ${skills}
 ${d.edu.map((e) => `  \\cventry{${dates(e.date)}}{${tex(e.title)}}{${tex(e.org)}}{}{}{${e.note ? tex(e.note) : ''}}`).join('\n')}
 
 \\section{${tex(d.h.sem)}}
-${d.sem.map((s) => `  \\cvitem{${dates(s.date)}}{${tex(s.title)} – ${tex(s.org)}}`).join('\n')}
+${d.sem.map((s) => `  \\cvitem{${dates(s.date)}}{\\textbf{${tex(s.title)}} \\textperiodcentered{} ${tex(s.org)}}`).join('\n')}
 
 \\section{${tex(d.h.lang)}}
 ${d.languages.map((g) => `  \\cvitem{${tex(g.name)}}{${tex(g.lvl)}${g.cert ? ` \\textperiodcentered{} ${tex(g.cert)}` : ''}}`).join('\n')}

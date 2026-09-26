@@ -45,7 +45,8 @@
       "light": "Light",
       "skip": "Skip to content",
       "menu": "Sections",
-      "online": "Online version of this CV, with the full scope of each role"
+      "online": "Online version of this CV, with the full scope of each role",
+      "country": "Greece"
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
@@ -60,10 +61,10 @@
     "jobs": [
       {
         "co": "NOBACCO",
-        "meta": "Greece · 2015 — 2025",
+        "meta": "Greece · 2015–2025",
         "roles": [
           {
-            "date": "2019 — 2025",
+            "date": "2019–2025",
             "title": "Regional & Business Development Manager",
             "pts": [
               "Ran regional operations across NOBACCO stores: policy compliance, operating expenses and ROI",
@@ -105,7 +106,7 @@
             ]
           },
           {
-            "date": "2015 — 2019",
+            "date": "2015–2019",
             "title": "Store Manager",
             "pts": [
               "Met the store’s monthly, quarterly and annual targets",
@@ -116,7 +117,7 @@
         ]
       },
       {
-        "date": "2010 — 2012",
+        "date": "2010–2012",
         "title": "IT Administrator",
         "org": "Internet café · Kato Achaia",
         "pts": [
@@ -126,7 +127,7 @@
         ]
       },
       {
-        "date": "2004 — 2007",
+        "date": "2004–2007",
         "title": "Customer Service Representative",
         "org": "OTE S.A. · Greece",
         "pts": [
@@ -179,7 +180,7 @@
     ],
     "sem": [
       {
-        "date": "2017 — 2024",
+        "date": "2017–2024",
         "title": "Customer Service",
         "org": "Hellenic Customer Service Institute · 2017–2019 and 2022–2024"
       },
@@ -236,7 +237,8 @@
       "light": "Φωτεινό",
       "skip": "Μετάβαση στο περιεχόμενο",
       "menu": "Ενότητες",
-      "online": "Ηλεκτρονική έκδοση του βιογραφικού, με αναλυτική περιγραφή των αρμοδιοτήτων"
+      "online": "Ηλεκτρονική έκδοση του βιογραφικού, με αναλυτική περιγραφή των αρμοδιοτήτων",
+      "country": "Ελλάδα"
     },
     "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
     "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",
@@ -251,10 +253,10 @@
     "jobs": [
       {
         "co": "NOBACCO",
-        "meta": "2015 — 2025",
+        "meta": "2015–2025",
         "roles": [
           {
-            "date": "2019 — 2025",
+            "date": "2019–2025",
             "title": "Περιφερειακός Διευθυντής & Υπεύθυνος Επιχειρηματικής Ανάπτυξης",
             "pts": [
               "Εποπτεία της λειτουργίας των καταστημάτων της περιοχής: τήρηση διαδικασιών, λειτουργικό κόστος, απόδοση (ROI)",
@@ -296,7 +298,7 @@
             ]
           },
           {
-            "date": "2015 — 2019",
+            "date": "2015–2019",
             "title": "Υπεύθυνος Καταστήματος",
             "pts": [
               "Επίτευξη των μηνιαίων, τριμηνιαίων και ετήσιων στόχων του καταστήματος",
@@ -307,7 +309,7 @@
         ]
       },
       {
-        "date": "2010 — 2012",
+        "date": "2010–2012",
         "title": "Διαχειριστής Συστημάτων",
         "org": "Internet café · Κάτω Αχαΐα",
         "pts": [
@@ -317,7 +319,7 @@
         ]
       },
       {
-        "date": "2004 — 2007",
+        "date": "2004–2007",
         "title": "Εκπρόσωπος Εξυπηρέτησης Πελατών",
         "org": "ΟΤΕ Α.Ε.",
         "pts": [
@@ -370,7 +372,7 @@
     ],
     "sem": [
       {
-        "date": "2017 — 2024",
+        "date": "2017–2024",
         "title": "Εξυπηρέτηση πελατών",
         "org": "Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών · 2017–2019 και 2022–2024"
       },

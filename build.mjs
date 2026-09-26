@@ -211,7 +211,7 @@ function body(lang) {
     <div class="rail"><span class="lbl">${esc(u.place)}</span></div>
     <div class="col">
       <h1>${esc(m.name)}</h1>
-      <p class="role">${esc(d.role)}${d.roleAt ? ` <span class="at">· ${esc(d.roleAt)}</span>` : ''}</p>
+      <p class="role">${esc(d.role)}${d.roleAt ? ` <span class="at"><span class="sep">· </span>${esc(d.roleAt)}</span>` : ''}</p>
       <p class="intro">${esc(d.intro)}</p>
       <div class="card">
         <div class="links">
@@ -432,7 +432,7 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
   <header>
     <h1>${esc(m.name)}</h1>
     <p class="role">${esc(d.role)}${d.roleAt ? ` <span class="at">· ${esc(d.roleAt)}</span>` : ''}</p>
-    <p class="contact"><span>${shared.email}</span><span>${esc(shared.phoneDisplay)}</span><span>${esc(bare(shared.linkedin))}</span><span>${esc(bare(shared.github))}</span><span>${esc(d.ui.place)}</span></p>
+    <p class="contact"><span>${shared.email}</span><span>${esc(shared.phoneDisplay)}</span><span>${esc(bare(shared.linkedin))}</span><span>${esc(bare(shared.github))}</span><span>${esc(d.ui.place)}, ${esc(d.ui.country)}</span></p>
     <p class="intro">${esc(d.intro)}</p>
   </header>
 
@@ -461,12 +461,13 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
 
 /* The running footer on every page: name, address of the page it came from,
  * the build month (so the PDF always says which deploy produced it) and the
- * page number. Chromium renders it outside the document, in system fonts. */
+ * page number. Chromium renders it outside the document, where only system
+ * fonts reach, so the build installs IBM Plex (fonts-ibm-plex) on the runner. */
 function printFooter(lang) {
   const m = data[lang].meta;
   const month = new Intl.DateTimeFormat(lang === 'el' ? 'el-GR' : 'en-GB', { month: 'long', year: 'numeric' }).format(new Date());
   const updated = lang === 'el' ? `Ενημέρωση: ${month}` : `Updated ${month}`;
-  return `<div style="width:100%;padding:0 16mm;font-family:'IBM Plex Sans','DejaVu Sans',Helvetica,Arial,sans-serif;font-size:7pt;color:#8A867C;display:flex;justify-content:space-between;">
+  return `<div style="width:100%;padding:0 16mm;font-family:'IBM Plex Sans','Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif;font-size:7pt;color:#8A867C;display:flex;justify-content:space-between;">
   <span>${esc(m.name)} · ${bare(site.origin)}/${lang}/ · ${esc(updated)}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`;
 }
 
