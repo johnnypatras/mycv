@@ -28,6 +28,15 @@ Several roles at one company go in a group, shown under one company line:
 { "co": "Company", "meta": "Greece · 2015–2025", "roles": [ { …role… }, { …role… } ] }
 ```
 
+Certifications go in `certs`, after `skills`. `url` is the verification page;
+the title links to it on the web page and in every PDF, without printing the address.
+
+```json
+{ "date": "2026", "title": "Professional Scrum Master I (PSM I)", "org": "Scrum.org", "url": "https://…" }
+```
+
+A date with two periods ("2017–2019, 2022–2024") is set on two lines in the PDFs.
+
 Everything downstream follows automatically: both web pages, both PDFs, the
 structured data for search engines and the sitemap.
 

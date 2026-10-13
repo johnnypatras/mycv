@@ -28,6 +28,8 @@ const esc = (s) => String(s)
 /* "A · B · C" lists: keep each separator with the word before it, so a
  * wrapped line never starts with a dot. */
 const list = (s) => esc(s).replace(/ · /g, '&nbsp;· ');
+// Headings never break inside a slashed term such as Η/Υ.
+const heading = (s) => esc(s).replace(/(\S+\/\S+)/g, '<span class="nw">$1</span>');
 const bare = (url) => url.replace(/^https?:\/\/(www\.)?/, '');
 
 /* QR code as inline SVG (vector, so it prints sharp). Filled in by
@@ -122,6 +124,13 @@ function head(lang) {
     ...(shared.employer ? { worksFor: { '@type': 'Organization', name: shared.employer } } : {}),
     alumniOf: { '@type': 'CollegeOrUniversity', name: shared.alumniOf },
     knowsLanguage: ['el', 'en', 'de'],
+    hasCredential: (d.certs || []).map((c) => ({
+      '@type': 'EducationalOccupationalCredential',
+      name: c.title,
+      credentialCategory: 'certificate',
+      recognizedBy: { '@type': 'Organization', name: c.org },
+      url: c.url
+    })),
     sameAs: [shared.linkedin, shared.github]
   };
 
@@ -171,7 +180,7 @@ function position(j, u, showOrg) {
           <div class="scope">${j.scope.map((g) => `<div><h4>${esc(g.h)}</h4>${pts(g.items)}</div>`).join('')}</div></details>` : '';
   return `<div class="row pos">
       <div class="rail"><span class="yr">${esc(j.date)}</span></div>
-      <div class="col"><h3>${esc(j.title)}</h3>${showOrg ? `<p class="org">${esc(j.org)}</p>` : ''}${pts(j.pts)}${scope}
+      <div class="col"><h3>${heading(j.title)}</h3>${showOrg ? `<p class="org">${esc(j.org)}</p>` : ''}${pts(j.pts)}${scope}
       </div></div>`;
 }
 
@@ -235,17 +244,24 @@ function body(lang) {
     </div></div></div>
   </section>
 
-  <section id="education">${sectionHead(d.h.edu)}
+  ${d.certs && d.certs.length ? `<section id="certifications">${sectionHead(d.h.cert)}
+    ${d.certs.map((c) => `<div class="item tight"><div class="row">
+      <div class="rail"><span class="yr">${esc(c.date)}</span></div>
+      <div class="col"><h3 class="sm">${c.url ? `<a class="cred" href="${esc(c.url)}" rel="noopener">${esc(c.title)}</a>` : esc(c.title)}</h3><p class="org">${esc(c.org)}</p></div>
+    </div></div>`).join('\n    ')}
+  </section>
+
+  ` : ''}<section id="education">${sectionHead(d.h.edu)}
     ${d.edu.map((e) => `<div class="item"><div class="row">
       <div class="rail"><span class="yr">${esc(e.date)}</span></div>
-      <div class="col"><h3>${esc(e.title)}</h3><p class="org">${esc(e.org)}</p>${e.note ? `<p class="desc">${esc(e.note)}</p>` : ''}</div>
+      <div class="col"><h3>${heading(e.title)}</h3><p class="org">${esc(e.org)}</p>${e.note ? `<p class="desc">${esc(e.note)}</p>` : ''}</div>
     </div></div>`).join('\n    ')}
   </section>
 
   <section id="seminars">${sectionHead(d.h.sem)}
     ${d.sem.map((s) => `<div class="item tight"><div class="row">
       <div class="rail"><span class="yr">${esc(s.date)}</span></div>
-      <div class="col"><h3 class="sm">${esc(s.title)}</h3><p class="org">${esc(s.org)}</p></div>
+      <div class="col"><h3 class="sm">${heading(s.title)}</h3><p class="org">${esc(s.org)}</p></div>
     </div></div>`).join('\n    ')}
   </section>
 
@@ -354,14 +370,14 @@ function printPage(lang) {
   const d = data[lang], m = d.meta;
 
   /* Date ranges as "2019–2025": the compact form every CV parser reads. */
-  const pd = (s) => esc(s).replace(/ — /g, '–');
+  const pd = (s) => esc(s).replace(/ — /g, '–').replace(/, /g, ',<br>');
   const entry = (date, title, org, bullets, note) => `
     <div class="entry">
       <div class="date">${pd(date)}</div>
       <div><h3>${esc(title)}</h3>${org ? `<p class="org">${esc(org)}</p>` : ''}${note ? `<p class="note">${esc(note)}</p>` : ''}${bullets ? `<ul>${bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}</div>
     </div>`;
-  const line = (date, title, org) => `
-    <div class="line"><span class="date">${pd(date)}</span><span><b>${esc(title)}</b>${org ? ` <span class="org">· ${esc(org)}</span>` : ''}</span></div>`;
+  const line = (date, title, org, url) => `
+    <div class="line"><span class="date">${pd(date)}</span><span><b>${url ? `<a href="${esc(url)}">${esc(title)}</a>` : esc(title)}</b>${org ? ` <span class="org">· ${esc(org)}</span>` : ''}</span></div>`;
 
   const jobs = d.jobs.map((j) => j.roles
     ? `<div class="group"><p class="co"><strong>${esc(j.co)}</strong> · ${pd(j.meta)}</p>${j.roles.map((r) => entry(r.date, r.title, '', r.pts)).join('')}</div>`
@@ -420,6 +436,7 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
 .skills .sub { display:block; font-family:'IBM Plex Sans',sans-serif; font-size:8.4pt; color:#6B6860; }
 .line { display:grid; grid-template-columns:25mm 1fr; column-gap:5mm; margin-top:2.2mm; }
 .line .date { padding-top:.3mm; }
+.line a { color:inherit; text-decoration:none; }
 .line b { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:10pt; color:#1A1A18; word-spacing:.04em; }
 .line .org { display:inline; margin:0; }
 .online { margin-top:9mm; display:flex; align-items:center; gap:4mm; break-inside:avoid; }
@@ -444,7 +461,10 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
     ${d.skills.map((t) => `<div class="${t.wide ? 'wide' : ''}"><span class="lbl">${esc(t.h)}</span><p${t.mono ? ' class="code"' : ''}>${list(t.text)}${t.sub ? `<span class="sub">${esc(t.sub)}</span>` : ''}</p></div>`).join('')}
   </div></section>
 
-  <section><h2>${esc(d.h.edu)}</h2>
+  ${d.certs && d.certs.length ? `<section><h2>${esc(d.h.cert)}</h2>
+  ${d.certs.map((c) => line(c.date, c.title, c.org, c.url)).join('')}</section>
+
+  ` : ''}<section><h2>${esc(d.h.edu)}</h2>
   ${d.edu.map((e) => entry(e.date, e.title, e.org, null, e.note)).join('')}</section>
 
   <section><h2>${esc(d.h.sem)}</h2>

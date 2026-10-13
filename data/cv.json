@@ -50,12 +50,13 @@
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
-    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics, combining a technical background with leadership in business development. Certifications in project management and modern technologies in progress; focused on roles that bring operations and technology together.",
+    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics, combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
     "h": {
-      "exp": "Experience",
+      "exp": "Professional Experience",
       "skills": "Skills",
+      "cert": "Certifications",
       "edu": "Education",
-      "sem": "Seminars",
+      "sem": "Training",
       "lang": "Languages"
     },
     "jobs": [
@@ -140,7 +141,7 @@
       {
         "wide": true,
         "h": "In progress",
-        "text": "Professional Scrum Master (PSM) · CS50P and CS50AI, Harvard · Oracle Java Foundations"
+        "text": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI), Harvard University"
       },
       {
         "wide": true,
@@ -154,20 +155,30 @@
         "text": "Strategic leadership and team development · Business planning and partnership management · Analytical problem-solving and process optimisation"
       },
       {
-        "h": "Applied",
-        "text": "Python",
-        "sub": "Six months on a company project",
-        "mono": true
-      },
-      {
-        "h": "Academic",
-        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "h": "Programming",
+        "wide": true,
+        "text": "Python · Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "sub": "Python: six months on a company project and CS50P",
         "mono": true
       },
       {
         "wide": true,
         "h": "Tools",
         "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
+      }
+    ],
+    "certs": [
+      {
+        "date": "2026",
+        "title": "Professional Scrum Master I (PSM I)",
+        "org": "Scrum.org",
+        "url": "https://scrum.org/certificates/1355984"
+      },
+      {
+        "date": "2026",
+        "title": "CS50’s Introduction to Programming with Python (CS50P)",
+        "org": "Harvard University",
+        "url": "https://cs50.harvard.edu/certificates/3cdf1196-2324-4a0c-b3f3-b63ed4946db7"
       }
     ],
     "edu": [
@@ -180,9 +191,9 @@
     ],
     "sem": [
       {
-        "date": "2017–2024",
+        "date": "2017–2019, 2022–2024",
         "title": "Customer Service",
-        "org": "Hellenic Customer Service Institute · 2017–2019 and 2022–2024"
+        "org": "Hellenic Customer Service Institute"
       },
       {
         "date": "2018",
@@ -242,10 +253,11 @@
     },
     "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
     "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",
-    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Παρακολούθηση προγραμμάτων πιστοποίησης στη διαχείριση έργων και στις σύγχρονες τεχνολογίες, με ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
+    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026· ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
     "h": {
       "exp": "Επαγγελματική εμπειρία",
       "skills": "Δεξιότητες",
+      "cert": "Πιστοποιήσεις",
       "edu": "Σπουδές",
       "sem": "Σεμινάρια",
       "lang": "Ξένες γλώσσες"
@@ -332,7 +344,7 @@
       {
         "wide": true,
         "h": "Σε εξέλιξη",
-        "text": "Professional Scrum Master (PSM) · CS50P και CS50AI, Harvard · Oracle Java Foundations"
+        "text": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI), Harvard University"
       },
       {
         "wide": true,
@@ -346,20 +358,30 @@
         "text": "Στρατηγική ηγεσία και ανάπτυξη ομάδων · Επιχειρηματικός σχεδιασμός και διαχείριση συνεργασιών · Αναλυτική επίλυση προβλημάτων και βελτίωση διαδικασιών"
       },
       {
-        "h": "Εφαρμοσμένη εμπειρία",
-        "text": "Python",
-        "sub": "Έξι μήνες σε εταιρικό έργο",
-        "mono": true
-      },
-      {
-        "h": "Ακαδημαϊκό επίπεδο",
-        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "h": "Προγραμματισμός",
+        "wide": true,
+        "text": "Python · Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
+        "sub": "Python: έξι μήνες σε εταιρικό έργο και CS50P",
         "mono": true
       },
       {
         "wide": true,
         "h": "Εργαλεία",
         "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
+      }
+    ],
+    "certs": [
+      {
+        "date": "2026",
+        "title": "Professional Scrum Master I (PSM I)",
+        "org": "Scrum.org",
+        "url": "https://scrum.org/certificates/1355984"
+      },
+      {
+        "date": "2026",
+        "title": "CS50’s Introduction to Programming with Python (CS50P)",
+        "org": "Harvard University",
+        "url": "https://cs50.harvard.edu/certificates/3cdf1196-2324-4a0c-b3f3-b63ed4946db7"
       }
     ],
     "edu": [
@@ -372,9 +394,9 @@
     ],
     "sem": [
       {
-        "date": "2017–2024",
+        "date": "2017–2019, 2022–2024",
         "title": "Εξυπηρέτηση πελατών",
-        "org": "Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών · 2017–2019 και 2022–2024"
+        "org": "Ελληνικό Ινστιτούτο Εξυπηρέτησης Πελατών"
       },
       {
         "date": "2018",

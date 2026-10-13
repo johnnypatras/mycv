@@ -41,10 +41,11 @@ const tex = (s) => String(s)
   .replace(/\b([a-z0-9-]+\.(?:org|com|gr|net)(?:\/[^\s)]*)?)/g, '\\mbox{$1}');
 /* Date ranges ("2019 — 2025") take an en dash without spaces: 2019–2025.
  * The character itself, not "--": Greek fonts under polyglossia skip TeX ligatures. */
-const dates = (s) => tex(s).replace(/ — /g, '–');
+const dates = (s) => tex(s).replace(/ — /g, '–').replace(/, /g, ',\\\\');  // two periods: one per line
 const items = (a) => a && a.length
   ? `\\begin{itemize}\n${a.map((x) => `      \\item ${tex(x)}`).join('\n')}\n    \\end{itemize}` : '';
-const lowerFirst = (s) => s.charAt(0).toLocaleLowerCase() + s.slice(1);
+// "Since October 2025" → "since October 2025"; a leading label ("Python: …") keeps its capital.
+const lowerFirst = (s) => /^\S+:/.test(s) ? s : s.charAt(0).toLocaleLowerCase() + s.slice(1);
 const bare = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 
 /* IBM Plex Sans, loaded by file name (XeLaTeX on macOS does not find TeX-tree
@@ -175,7 +176,10 @@ ${jobs}
 \\section{${tex(d.h.skills)}}
 ${skills}
 
-\\section{${tex(d.h.edu)}}
+${d.certs && d.certs.length ? `\\section{${tex(d.h.cert)}}
+${d.certs.map((c) => `  \\cvitem{${dates(c.date)}}{${c.url ? `\\href{${c.url}}{\\textbf{${tex(c.title)}}}` : `\\textbf{${tex(c.title)}}`} \\textperiodcentered{} ${tex(c.org)}}`).join('\n')}
+
+` : ''}\\section{${tex(d.h.edu)}}
 ${d.edu.map((e) => `  \\cventry{${dates(e.date)}}{${tex(e.title)}}{${tex(e.org)}}{}{}{${e.note ? tex(e.note) : ''}}`).join('\n')}
 
 \\section{${tex(d.h.sem)}}

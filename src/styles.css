@@ -91,6 +91,9 @@ hr{border:0;height:1px;background:var(--rule);margin:0}
 hr + .item.tight{padding-top:24px}
 h3{font-family:var(--serif);font-weight:var(--h3w);font-size:20px;line-height:1.3;margin:0;letter-spacing:-.006em;text-wrap:balance}
 h3.sm{font-size:17px}
+.nw{white-space:nowrap}
+a.cred{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;text-decoration-color:var(--rule)}
+a.cred:hover{color:var(--accent);text-decoration-color:currentColor}
 .org{margin:5px 0 0;font-size:13.5px;color:var(--muted)}
 .co{margin:0 0 14px;font-size:13.5px;line-height:1.4;color:var(--muted)}
 .co strong{color:var(--ink);font-weight:600;letter-spacing:.02em}
