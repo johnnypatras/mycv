@@ -161,7 +161,8 @@
         "date": "2019",
         "title": "Diploma in Computer Engineering and Informatics (Integrated Master’s)",
         "org": "University of Patras · School of Engineering",
-        "note": "5 years, 300 ECTS · Thesis: “Low Code Development Platforms”"
+        "note": "5 years, 300 ECTS, EQF level 7",
+        "thesis": "Thesis: “Low Code Development Platforms” — criteria for choosing a low-code platform by organisation and application type; case study of Mendix in project-management teaching"
       }
     ],
     "skills": [
@@ -368,7 +369,8 @@
         "date": "2019",
         "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής (Integrated Master)",
         "org": "Πανεπιστήμιο Πατρών · Πολυτεχνική Σχολή",
-        "note": "5ετές, 300 ECTS · Διπλωματική εργασία: «Low Code Development Platforms»"
+        "note": "5ετές, 300 ECTS, EQF επίπεδο 7",
+        "thesis": "Διπλωματική εργασία: «Πλατφόρμες Ανάπτυξης Χαμηλού Κώδικα» — κριτήρια επιλογής πλατφόρμας χαμηλού κώδικα ανάλογα με τον τύπο οργανισμού και εφαρμογής· μελέτη περίπτωσης της πλατφόρμας Mendix στη διδασκαλία διαχείρισης έργων"
       }
     ],
     "skills": [

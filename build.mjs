@@ -247,7 +247,7 @@ function body(lang) {
   ` : ''}<section id="education">${sectionHead(d.h.edu)}
     ${d.edu.map((e) => `<div class="item"><div class="row">
       <div class="rail"><span class="yr">${esc(e.date)}</span></div>
-      <div class="col"><h3>${heading(e.title)}</h3><p class="org">${esc(e.org)}</p>${e.note ? `<p class="desc">${esc(e.note)}</p>` : ''}</div>
+      <div class="col"><h3>${heading(e.title)}</h3><p class="org">${esc(e.org)}</p>${[e.note, e.thesis].filter(Boolean).map((n) => `<p class="desc">${esc(n)}</p>`).join('')}</div>
     </div></div>`).join('\n    ')}
   </section>
 
@@ -374,7 +374,7 @@ function printPage(lang) {
   const entry = (date, title, org, bullets, note) => `
     <div class="entry">
       <div class="date">${pd(date)}</div>
-      <div><h3>${esc(title)}</h3>${org ? `<p class="org">${esc(org)}</p>` : ''}${note ? `<p class="note">${esc(note)}</p>` : ''}${bullets ? `<ul>${bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}</div>
+      <div><h3>${esc(title)}</h3>${org ? `<p class="org">${esc(org)}</p>` : ''}${[].concat(note || []).map((n) => `<p class="note">${esc(n)}</p>`).join('')}${bullets ? `<ul>${bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}</div>
     </div>`;
   const line = (date, title, org, url) => `
     <div class="line"><span class="date">${pd(date)}</span><span><b>${url ? `<a href="${esc(url)}">${esc(title)}</a>` : esc(title)}</b>${org ? ` <span class="org">· ${esc(org)}</span>` : ''}</span></div>`;
@@ -460,7 +460,7 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
   ${d.certs.map((c) => line(c.date, c.title, c.org, c.url)).join('')}</section>
 
   ` : ''}<section><h2>${esc(d.h.edu)}</h2>
-  ${d.edu.map((e) => entry(e.date, e.title, e.org, null, e.note)).join('')}</section>
+  ${d.edu.map((e) => entry(e.date, e.title, e.org, null, [e.note, e.thesis].filter(Boolean))).join('')}</section>
 
   <section><h2>${esc(d.h.skills)}</h2>
   <div class="skills">

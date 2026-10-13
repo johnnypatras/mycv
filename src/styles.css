@@ -103,6 +103,7 @@ a.cred:hover{color:var(--accent);text-decoration-color:currentColor}
 .co-grp .pos:not(:last-child)::after{content:"";position:absolute;left:3px;top:30px;bottom:-20px;width:1px;background:var(--rule)}
 @media (max-width:760px){.co-grp .pos::after{display:none}}
 .desc{margin:10px 0 0;max-width:var(--measure);font-size:15px;line-height:1.7;color:var(--body)}
+.desc + .desc{margin-top:4px}
 ul.pts{list-style:none;margin:12px 0 0;padding:0;max-width:var(--measure);display:flex;flex-direction:column;gap:6px}
 ul.pts li{position:relative;padding-left:20px;font-size:15px;line-height:1.62;color:var(--body)}
 ul.pts li::before{content:"";position:absolute;left:2px;top:.8em;width:9px;height:1px;background:var(--faint)}
