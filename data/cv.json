@@ -139,11 +139,6 @@
     ],
     "certs": [
       {
-        "date": "In progress",
-        "title": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI)",
-        "org": "Harvard University"
-      },
-      {
         "date": "2026",
         "title": "Professional Scrum Master I (PSM I)",
         "org": "Scrum.org",
@@ -154,6 +149,11 @@
         "title": "CS50’s Introduction to Programming with Python (CS50P)",
         "org": "Harvard University",
         "url": "https://cs50.harvard.edu/certificates/3cdf1196-2324-4a0c-b3f3-b63ed4946db7"
+      },
+      {
+        "date": "In progress",
+        "title": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI)",
+        "org": "Harvard University"
       }
     ],
     "skills": [
@@ -342,11 +342,6 @@
     ],
     "certs": [
       {
-        "date": "Σε εξέλιξη",
-        "title": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI)",
-        "org": "Harvard University"
-      },
-      {
         "date": "2026",
         "title": "Professional Scrum Master I (PSM I)",
         "org": "Scrum.org",
@@ -357,6 +352,11 @@
         "title": "CS50’s Introduction to Programming with Python (CS50P)",
         "org": "Harvard University",
         "url": "https://cs50.harvard.edu/certificates/3cdf1196-2324-4a0c-b3f3-b63ed4946db7"
+      },
+      {
+        "date": "Σε εξέλιξη",
+        "title": "CS50’s Introduction to Artificial Intelligence with Python (CS50AI)",
+        "org": "Harvard University"
       }
     ],
     "skills": [
