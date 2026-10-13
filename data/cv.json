@@ -50,7 +50,7 @@
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
-    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics, combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
+    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics (Integrated Master’s), combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
     "h": {
       "exp": "Professional Experience",
       "cert": "Certifications",
@@ -159,9 +159,9 @@
     "edu": [
       {
         "date": "2019",
-        "title": "Diploma in Computer Engineering and Informatics",
+        "title": "Diploma in Computer Engineering and Informatics (Integrated Master’s)",
         "org": "University of Patras · School of Engineering",
-        "note": "Thesis: “Low Code Development Platforms”"
+        "note": "5 years, 300 ECTS · Thesis: “Low Code Development Platforms”"
       }
     ],
     "skills": [
@@ -257,7 +257,7 @@
     },
     "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
     "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",
-    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026· ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
+    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής (Integrated Master) του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026· ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
     "h": {
       "exp": "Επαγγελματική εμπειρία",
       "cert": "Πιστοποιήσεις",
@@ -366,9 +366,9 @@
     "edu": [
       {
         "date": "2019",
-        "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
+        "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής (Integrated Master)",
         "org": "Πανεπιστήμιο Πατρών · Πολυτεχνική Σχολή",
-        "note": "Διπλωματική εργασία: «Low Code Development Platforms»"
+        "note": "5ετές, 300 ECTS · Διπλωματική εργασία: «Low Code Development Platforms»"
       }
     ],
     "skills": [
