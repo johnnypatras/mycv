@@ -173,13 +173,13 @@ ${tex(d.intro)}
 \\section{${tex(d.h.exp)}}
 ${jobs}
 
-\\section{${tex(d.h.skills)}}
-${skills}
-
 ${d.certs && d.certs.length ? `\\section{${tex(d.h.cert)}}
 ${d.certs.map((c) => `  \\cvitem{${dates(c.date)}}{${c.url ? `\\href{${c.url}}{\\textbf{${tex(c.title)}}}` : `\\textbf{${tex(c.title)}}`} \\textperiodcentered{} ${tex(c.org)}}`).join('\n')}
 
-` : ''}\\section{${tex(d.h.edu)}}
+` : ''}\\section{${tex(d.h.skills)}}
+${skills}
+
+\\section{${tex(d.h.edu)}}
 ${d.edu.map((e) => `  \\cventry{${dates(e.date)}}{${tex(e.title)}}{${tex(e.org)}}{}{}{${e.note ? tex(e.note) : ''}}`).join('\n')}
 
 \\section{${tex(d.h.sem)}}

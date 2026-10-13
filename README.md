@@ -28,8 +28,9 @@ Several roles at one company go in a group, shown under one company line:
 { "co": "Company", "meta": "Greece · 2015–2025", "roles": [ { …role… }, { …role… } ] }
 ```
 
-Certifications go in `certs`, after `skills`. `url` is the verification page;
-the title links to it on the web page and in every PDF, without printing the address.
+Certifications go in `certs`, shown right after the experience. `url` is the
+verification page; the title links to it on the web page and in every PDF, without
+printing the address. A course still under way takes "In progress" as its date and no `url`.
 
 ```json
 { "date": "2026", "title": "Professional Scrum Master I (PSM I)", "org": "Scrum.org", "url": "https://…" }
