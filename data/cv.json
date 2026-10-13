@@ -50,7 +50,7 @@
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
-    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics (Integrated Master’s), combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
+    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics (Integrated Master’s degree), combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
     "h": {
       "exp": "Professional Experience",
       "cert": "Certifications",
@@ -159,7 +159,7 @@
     "edu": [
       {
         "date": "2019",
-        "title": "Diploma in Computer Engineering and Informatics (Integrated Master’s)",
+        "title": "Diploma in Computer Engineering and Informatics (Integrated Master’s degree)",
         "org": "University of Patras · School of Engineering",
         "note": "5 years, 300 ECTS, EQF level 7",
         "thesis": "Thesis: “Low Code Development Platforms” — software engineering and information systems: model-driven and rapid application development (MDD, RAD), platform evaluation criteria and technology selection"
