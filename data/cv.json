@@ -54,8 +54,8 @@
     "h": {
       "exp": "Professional Experience",
       "cert": "Certifications",
-      "skills": "Skills",
       "edu": "Education",
+      "skills": "Skills",
       "sem": "Training",
       "lang": "Languages"
     },
@@ -156,12 +156,20 @@
         "org": "Harvard University"
       }
     ],
+    "edu": [
+      {
+        "date": "2019",
+        "title": "Diploma in Computer Engineering and Informatics",
+        "org": "University of Patras · School of Engineering",
+        "note": "Thesis: “Low Code Development Platforms”"
+      }
+    ],
     "skills": [
       {
         "wide": true,
         "h": "AI tools",
         "text": "AI coding agents (Claude Code, OpenCode, Pi) with frontier and locally run open-weight models (LM Studio, Qwen) · LiteLLM",
-        "sub": "Since October 2025 · used to build ialexopoulos.org"
+        "sub": "Since October 2025"
       },
       {
         "h": "Management",
@@ -169,24 +177,20 @@
         "text": "Strategic leadership and team development · Business planning and partnership management · Analytical problem-solving and process optimisation"
       },
       {
-        "h": "Programming",
-        "wide": true,
-        "text": "Python · Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
-        "sub": "Python: six months on a company project and CS50P",
+        "h": "Applied programming",
+        "text": "Python",
+        "sub": "Six months on a company project · CS50P, Harvard",
+        "mono": true
+      },
+      {
+        "h": "Academic programming",
+        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · Assembly · Microprogramming · HTML5 · CSS",
         "mono": true
       },
       {
         "wide": true,
         "h": "Tools",
         "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
-      }
-    ],
-    "edu": [
-      {
-        "date": "2019",
-        "title": "Diploma in Computer Engineering and Informatics",
-        "org": "University of Patras · School of Engineering",
-        "note": "Thesis: “Low Code Development Platforms”"
       }
     ],
     "sem": [
@@ -257,8 +261,8 @@
     "h": {
       "exp": "Επαγγελματική εμπειρία",
       "cert": "Πιστοποιήσεις",
-      "skills": "Δεξιότητες",
       "edu": "Σπουδές",
+      "skills": "Δεξιότητες",
       "sem": "Σεμινάρια",
       "lang": "Ξένες γλώσσες"
     },
@@ -359,12 +363,20 @@
         "org": "Harvard University"
       }
     ],
+    "edu": [
+      {
+        "date": "2019",
+        "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
+        "org": "Πανεπιστήμιο Πατρών · Πολυτεχνική Σχολή",
+        "note": "Διπλωματική εργασία: «Low Code Development Platforms»"
+      }
+    ],
     "skills": [
       {
         "wide": true,
         "h": "Τεχνητή νοημοσύνη",
         "text": "Εργαλεία προγραμματισμού με τεχνητή νοημοσύνη (Claude Code, OpenCode, Pi), με μοντέλα αιχμής και μοντέλα ανοιχτών βαρών σε τοπική εκτέλεση (LM Studio, Qwen) · LiteLLM",
-        "sub": "Από τον Οκτώβριο του 2025 · με αυτά αναπτύχθηκε το ialexopoulos.org"
+        "sub": "Από τον Οκτώβριο του 2025"
       },
       {
         "h": "Διοίκηση",
@@ -372,24 +384,20 @@
         "text": "Στρατηγική ηγεσία και ανάπτυξη ομάδων · Επιχειρηματικός σχεδιασμός και διαχείριση συνεργασιών · Αναλυτική επίλυση προβλημάτων και βελτίωση διαδικασιών"
       },
       {
-        "h": "Προγραμματισμός",
-        "wide": true,
-        "text": "Python · Java · JavaScript · SQL · MATLAB · C · C++ · HTML5 · CSS",
-        "sub": "Python: έξι μήνες σε εταιρικό έργο και CS50P",
+        "h": "Εφαρμοσμένος προγραμματισμός",
+        "text": "Python",
+        "sub": "Έξι μήνες σε εταιρικό έργο · CS50P, Harvard",
+        "mono": true
+      },
+      {
+        "h": "Ακαδημαϊκή γνώση",
+        "text": "Java · JavaScript · SQL · MATLAB · C · C++ · Assembly · Μικροπρογραμματισμός · HTML5 · CSS",
         "mono": true
       },
       {
         "wide": true,
         "h": "Εργαλεία",
         "text": "Linux (Debian, Fedora, Ubuntu) · Git & GitHub · VS Code · LaTeX"
-      }
-    ],
-    "edu": [
-      {
-        "date": "2019",
-        "title": "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής",
-        "org": "Πανεπιστήμιο Πατρών · Πολυτεχνική Σχολή",
-        "note": "Διπλωματική εργασία: «Low Code Development Platforms»"
       }
     ],
     "sem": [

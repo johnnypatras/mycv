@@ -96,7 +96,7 @@ const PRINT_FONT_CSS = PRINT_FAMILIES.flatMap(([family, stem, weights]) => weigh
 
 /* ----------------------------------------------------------------- page -- */
 const urlFor = (lang) => `${site.origin}/${lang}/`;
-const SECTIONS = ['about', 'experience', 'skills', 'education'];
+const SECTIONS = ['about', 'experience', 'education', 'skills'];
 
 function head(lang) {
   const d = data[lang], m = d.meta;
@@ -244,18 +244,18 @@ function body(lang) {
     </div></div>`).join('\n    ')}
   </section>
 
-  ` : ''}<section id="skills">${sectionHead(d.h.skills)}
-    <div class="row"><div class="rail"></div><div class="col"><div class="grid">
-      ${d.skills.map((t) => `<div class="grp${t.wide ? ' wide' : ''}"><span class="lbl">${esc(t.h)}</span>
-        <p${t.mono ? ' class="code"' : ''}>${list(t.text)}${t.sub ? `<span class="sub">${esc(t.sub)}</span>` : ''}</p></div>`).join('\n      ')}
-    </div></div></div>
-  </section>
-
-  <section id="education">${sectionHead(d.h.edu)}
+  ` : ''}<section id="education">${sectionHead(d.h.edu)}
     ${d.edu.map((e) => `<div class="item"><div class="row">
       <div class="rail"><span class="yr">${esc(e.date)}</span></div>
       <div class="col"><h3>${heading(e.title)}</h3><p class="org">${esc(e.org)}</p>${e.note ? `<p class="desc">${esc(e.note)}</p>` : ''}</div>
     </div></div>`).join('\n    ')}
+  </section>
+
+  <section id="skills">${sectionHead(d.h.skills)}
+    <div class="row"><div class="rail"></div><div class="col"><div class="grid">
+      ${d.skills.map((t) => `<div class="grp${t.wide ? ' wide' : ''}"><span class="lbl">${esc(t.h)}</span>
+        <p${t.mono ? ' class="code"' : ''}>${list(t.text)}${t.sub ? `<span class="sub">${esc(t.sub)}</span>` : ''}</p></div>`).join('\n      ')}
+    </div></div></div>
   </section>
 
   <section id="seminars">${sectionHead(d.h.sem)}
@@ -459,13 +459,13 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
   ${d.certs && d.certs.length ? `<section><h2>${esc(d.h.cert)}</h2>
   ${d.certs.map((c) => line(c.date, c.title, c.org, c.url)).join('')}</section>
 
-  ` : ''}<section><h2>${esc(d.h.skills)}</h2>
+  ` : ''}<section><h2>${esc(d.h.edu)}</h2>
+  ${d.edu.map((e) => entry(e.date, e.title, e.org, null, e.note)).join('')}</section>
+
+  <section><h2>${esc(d.h.skills)}</h2>
   <div class="skills">
     ${d.skills.map((t) => `<div class="${t.wide ? 'wide' : ''}"><span class="lbl">${esc(t.h)}</span><p${t.mono ? ' class="code"' : ''}>${list(t.text)}${t.sub ? `<span class="sub">${esc(t.sub)}</span>` : ''}</p></div>`).join('')}
   </div></section>
-
-  <section><h2>${esc(d.h.edu)}</h2>
-  ${d.edu.map((e) => entry(e.date, e.title, e.org, null, e.note)).join('')}</section>
 
   <section><h2>${esc(d.h.sem)}</h2>
   ${d.sem.map((s) => line(s.date, s.title, s.org)).join('')}</section>
