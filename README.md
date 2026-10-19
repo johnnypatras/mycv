@@ -62,6 +62,12 @@ with XeLaTeX when it is installed (MacTeX here). The `.tex` files are committed,
 so they also open on Overleaf (set the compiler to XeLaTeX). The compiled PDFs
 stay local and are not part of the website build.
 
+Each language has two summaries in `cv.json`: `intro` (experience first — used
+on the website, the site PDFs and `cv-<lang>.pdf`) and `introTech` (degree and
+the move into technology roles first — used only for `cv-<lang>-tech.pdf`, the
+version for IT and analyst applications). Both are arrays; each item is printed
+as its own paragraph.
+
 ## What gets built
 
 | Output | Purpose |

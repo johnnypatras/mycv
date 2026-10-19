@@ -52,7 +52,7 @@ const bare = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
  * fonts by family name). SemiBold for bold, as on the website. */
 const PLEX = 'IBMPlexSans-Regular.otf}[BoldFont=IBMPlexSans-SemiBold.otf, ItalicFont=IBMPlexSans-Italic.otf, BoldItalicFont=IBMPlexSans-SemiBoldItalic.otf]';
 
-function document(lang) {
+function document(lang, variant = '') {
   const d = data[lang], L = LABELS[lang];
   const [first, ...rest] = d.meta.name.split(' ');
   const url = `${site.origin}/${lang}/`;
@@ -168,7 +168,7 @@ ${contact}
 \\makecvtitle
 
 \\section{${tex(L.summary)}}
-${tex(d.intro)}
+${[].concat(variant === 'tech' ? d.introTech : d.intro).map(tex).join('\n\n\\smallskip\n')}
 
 \\section{${tex(d.h.exp)}}
 ${jobs}
@@ -199,23 +199,29 @@ ${d.languages.map((g) => `  \\cvitem{${tex(g.name)}}{${tex(g.lvl)}${g.cert ? ` \
 `;
 }
 
-for (const lang of site.languages) {
-  writeFileSync(join(HERE, `cv-${lang}.tex`), document(lang));
-  console.log(`  ✓ latex/cv-${lang}.tex`);
+/* Two versions per language: the default (experience first) and "tech",
+   which opens with the degree and the move into technology roles. */
+const builds = site.languages.flatMap((lang) => [
+  { lang, variant: '', name: `cv-${lang}` },
+  { lang, variant: 'tech', name: `cv-${lang}-tech` }
+]);
+for (const b of builds) {
+  writeFileSync(join(HERE, `${b.name}.tex`), document(b.lang, b.variant));
+  console.log(`  ✓ latex/${b.name}.tex`);
 }
 
 /* Compile when a TeX installation is present (MacTeX, TeX Live). */
 const xelatex = ['/Library/TeX/texbin/xelatex', '/usr/bin/xelatex', 'xelatex'].find((p) => p === 'xelatex' || existsSync(p));
 if (!process.argv.includes('--no-pdf')) {
-  for (const lang of site.languages) {
+  for (const { name } of builds) {
     try {
       for (let pass = 0; pass < 2; pass++) {   // second pass: page count in the footer, TikZ line positions
-        execFileSync(xelatex, ['-interaction=nonstopmode', '-halt-on-error', `cv-${lang}.tex`], { cwd: HERE, stdio: 'pipe' });
+        execFileSync(xelatex, ['-interaction=nonstopmode', '-halt-on-error', `${name}.tex`], { cwd: HERE, stdio: 'pipe' });
       }
-      console.log(`  ✓ latex/cv-${lang}.pdf`);
+      console.log(`  ✓ latex/${name}.pdf`);
     } catch (e) {
-      const log = existsSync(join(HERE, `cv-${lang}.log`)) ? readFileSync(join(HERE, `cv-${lang}.log`), 'utf8') : String(e);
-      console.error(`  ! cv-${lang}.tex did not compile:\n${log.split('\n').filter((l) => l.startsWith('!')).slice(0, 5).join('\n') || String(e.message).slice(0, 400)}`);
+      const log = existsSync(join(HERE, `${name}.log`)) ? readFileSync(join(HERE, `${name}.log`), 'utf8') : String(e);
+      console.error(`  ! ${name}.tex did not compile:\n${log.split('\n').filter((l) => l.startsWith('!')).slice(0, 5).join('\n') || String(e.message).slice(0, 400)}`);
       process.exitCode = 1;
     }
   }

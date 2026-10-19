@@ -221,7 +221,7 @@ function body(lang) {
     <div class="col">
       <h1>${esc(m.name)}</h1>
       <p class="role">${esc(d.role)}${d.roleAt ? ` <span class="at"><span class="sep">· </span>${esc(d.roleAt)}</span>` : ''}</p>
-      <p class="intro">${esc(d.intro)}</p>
+      ${[].concat(d.intro).map((t) => `<p class="intro">${esc(t)}</p>`).join('\n      ')}
       <div class="card">
         <div class="links">
           <a class="pri" href="mailto:${shared.email}">${shared.email}</a>
@@ -402,6 +402,7 @@ h1 { font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:24pt
 .contact span { white-space:nowrap; }
 .contact span + span::before { content:'  ·  '; white-space:pre; color:#B5B1A7; }
 .intro { margin-top:4mm; font-size:9.4pt; line-height:1.55; }
+.intro + .intro { margin-top:2mm; }
 section { break-inside:avoid; }
 h2 { font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:13.5pt; color:#1A1A18;
      border-bottom:.6pt solid #E2DFD6; padding-bottom:1.2mm; margin:6.5mm 0 1mm; break-after:avoid; }
@@ -450,7 +451,7 @@ li::before { content:''; display:inline-block; width:2mm; margin:0 2mm 0 -4mm; v
     <h1>${esc(m.name)}</h1>
     <p class="role">${esc(d.role)}${d.roleAt ? ` <span class="at">· ${esc(d.roleAt)}</span>` : ''}</p>
     <p class="contact"><span>${shared.email}</span><span>${esc(shared.phoneDisplay)}</span><span>${esc(bare(shared.linkedin))}</span><span>${esc(bare(shared.github))}</span><span>${esc(d.ui.place)}, ${esc(d.ui.country)}</span></p>
-    <p class="intro">${esc(d.intro)}</p>
+    ${[].concat(d.intro).map((t) => `<p class="intro">${esc(t)}</p>`).join('\n      ')}
   </header>
 
   <h2>${esc(d.h.exp)}</h2>

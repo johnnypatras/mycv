@@ -50,7 +50,14 @@
     },
     "role": "Operations & Business Development",
     "roleAt": "Computer Engineer",
-    "intro": "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands. Diploma in Computer Engineering and Informatics (Integrated Master’s degree), combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together.",
+    "intro": [
+      "More than 15 years of experience leading teams, optimising operations and driving sustained growth. At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution across the Peloponnese, Western Greece and the Ionian Islands.",
+      "Diploma in Computer Engineering and Informatics (Integrated Master’s degree), combining a technical background with leadership in business development. Professional Scrum Master I (PSM I) and Harvard’s CS50P certifications completed in 2026; focused on roles that bring operations and technology together."
+    ],
+    "introTech": [
+      "Computer Engineering and Informatics graduate (Integrated Master’s degree), now moving into technology roles after 15 years in operations management. Professional Scrum Master I (PSM I) and Harvard’s CS50P (Python) certifications completed in 2026.",
+      "At NOBACCO, progression from store manager to regional manager, with responsibility for the region’s stores, a team of 30, eight franchisees and wholesale distribution — hands-on knowledge of business processes and stakeholders to bring to technology projects."
+    ],
     "h": {
       "exp": "Professional Experience",
       "cert": "Certifications",
@@ -258,7 +265,14 @@
     },
     "role": "Διοίκηση λειτουργιών & επιχειρηματική ανάπτυξη",
     "roleAt": "Μηχανικός Η/Υ και Πληροφορικής",
-    "intro": "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά. Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής (Integrated Master) του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026· ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία.",
+    "intro": [
+      "Περισσότερα από 15 χρόνια εμπειρίας στη διοίκηση ομάδων, στην οργάνωση της λειτουργίας και στην ανάπτυξη πωλήσεων. Στη NOBACCO, εξέλιξη από τη θέση του υπευθύνου καταστήματος σε αυτή του περιφερειακού διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση σε Πελοπόννησο, Δυτική Ελλάδα και Ιόνια Νησιά.",
+      "Δίπλωμα Μηχανικού Η/Υ και Πληροφορικής (Integrated Master) του Πανεπιστημίου Πατρών· συνδυασμός τεχνικού υποβάθρου και εμπειρίας στην επιχειρηματική ανάπτυξη. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026· ενδιαφέρον για θέσεις που συνδυάζουν τη διοίκηση λειτουργιών με την τεχνολογία."
+    ],
+    "introTech": [
+      "Διπλωματούχος Μηχανικός Η/Υ και Πληροφορικής (Integrated Master) του Πανεπιστημίου Πατρών, με στόχο τη μετάβαση σε θέσεις τεχνολογίας μετά από 15 χρόνια στη διοίκηση λειτουργιών. Πιστοποιήσεις Professional Scrum Master I (PSM I) και CS50P (Harvard University) το 2026.",
+      "Στη NOBACCO, εξέλιξη από υπεύθυνο καταστήματος σε περιφερειακό διευθυντή, με ευθύνη για τα καταστήματα της περιοχής, ομάδα 30 εργαζομένων, οκτώ καταστήματα franchise και τη χονδρική διάθεση· πρακτική γνώση επιχειρηματικών διαδικασιών και συνεργασίας με ενδιαφερόμενα μέρη, χρήσιμη σε έργα τεχνολογίας."
+    ],
     "h": {
       "exp": "Επαγγελματική εμπειρία",
       "cert": "Πιστοποιήσεις",
